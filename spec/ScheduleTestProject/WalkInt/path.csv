@@ -1,0 +1,22 @@
+Path: 1 -> 2
+
+Access Candidates
+Stopnr, Nodenr, Access Cost, At Stop Cost, Total Cost, Usage
+1, 10000, 0.1, 0.252212, 0.352212, 1
+
+Wave 0
+Stopnr, Transitlinenr, On-board cost, Frequency, Trips, Alighting stop, Alighting cost, Alighting behaviour, Reboarding stop, Walk interchange cost, Reboard stop cost
+1,1,0.052212,1.000000,1.000000,2,0.050000,Egress,0,0.000000,0.000000
+
+Wave 1
+Stopnr, Transitlinenr, On-board cost, Frequency, Trips, Alighting stop, Alighting cost, Alighting behaviour, Reboarding stop, Walk interchange cost, Reboard stop cost
+
+Wave 2
+Stopnr, Transitlinenr, On-board cost, Frequency, Trips, Alighting stop, Alighting cost, Alighting behaviour, Reboarding stop, Walk interchange cost, Reboard stop cost
+
+Wave 3
+Stopnr, Transitlinenr, On-board cost, Frequency, Trips, Alighting stop, Alighting cost, Alighting behaviour, Reboarding stop, Walk interchange cost, Reboard stop cost
+
+Wave 4
+Stopnr, Transitlinenr, On-board cost, Frequency, Trips, Alighting stop, Alighting cost, Alighting behaviour, Reboarding stop, Walk interchange cost, Reboard stop cost
+
