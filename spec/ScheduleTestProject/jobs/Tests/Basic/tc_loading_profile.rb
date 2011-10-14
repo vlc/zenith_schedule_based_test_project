@@ -1,5 +1,4 @@
-require 'Utils/TestAssistant'
-require 'test/unit'
+require 'utils/spec/ot_test_suite'
 
 class TC_loading_profile < OtTestCase
 
@@ -84,4 +83,4 @@ class TC_loading_profile < OtTestCase
   end
 end
 
-# Test::Unit::UI::Console::TestRunner.run(TC_loading_profile, 3)
+OtTestCaseRunner.run(__FILE__)

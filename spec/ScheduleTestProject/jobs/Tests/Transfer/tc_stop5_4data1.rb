@@ -1,6 +1,4 @@
-require 'Utils/TestAssistant'
-require 'utils/ot_test_suite'
-require 'test/unit'
+require 'utils/spec/ot_test_suite'
 
 class TC_stop5_4data1_table < OtTestCase
 
@@ -86,5 +84,4 @@ class TC_stop5_4data1_table < OtTestCase
   end
 end
 
-#require 'test/unit/ui/console/testrunner'
-#Test::Unit::UI::Console::TestRunner.run(TC_stop5_4data1_table, 3)
+OtTestCaseRunner.run(__FILE__)

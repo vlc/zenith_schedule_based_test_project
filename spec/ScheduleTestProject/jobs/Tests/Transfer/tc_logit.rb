@@ -1,6 +1,4 @@
-require 'Utils/TestAssistant'
-require 'utils/ot_test_suite'
-require 'test/unit'
+require 'utils/spec/ot_test_suite'
 
 class TC_logit < OtTestCase
 
@@ -59,4 +57,4 @@ class TC_logit < OtTestCase
   end
 end
 
-#Test::Unit::UI::Console::TestRunner.run(TC_logit, 3)
+OtTestCaseRunner.run(__FILE__)

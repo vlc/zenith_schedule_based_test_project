@@ -1,4 +1,4 @@
-require 'Utils/TestAssistant'
+require 'utils/spec/ot_test_suite'
 
 class TC_load < OtTestCase
 
@@ -12,11 +12,12 @@ class TC_load < OtTestCase
     @tr.load = [1,30,10,1,1,1]
     @tr.network = [30,10]
     @tr.scheduleBased = true
+    @tr.numberOfThreads = 1
   end
 
   def teardown
     @tr = nil
-    super
+    #super
   end
 
   def test_simple
@@ -53,6 +54,7 @@ class TC_load < OtTestCase
 
   end
 
+  # I don't know why this is broken
   def test_animateLoads
     assert_nothing_raised(RuntimeError) {
 
@@ -267,4 +269,4 @@ class TC_load < OtTestCase
   end
 end
 
-# Test::Unit::UI::Console::TestRunner.run(TC_load, 3)
+OtTestCaseRunner.run(__FILE__)

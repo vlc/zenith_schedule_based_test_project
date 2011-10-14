@@ -1,6 +1,4 @@
-require 'Utils/TestAssistant'
-require 'utils/ot_test_suite'
-require 'test/unit'
+require 'utils/spec/ot_test_suite'
 
 class TC_routeFactors < OtTestCase
 
@@ -73,4 +71,4 @@ class TC_routeFactors < OtTestCase
   end
 end
 
-# Test::Unit::UI::Console::TestRunner.run(TC_routeFactors, 3)
+OtTestCaseRunner.run(__FILE__)

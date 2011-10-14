@@ -1,6 +1,4 @@
-require 'Utils/TestAssistant'
-
-require 'test/unit'
+require 'utils/spec/ot_test_suite'
 
 class TC_modes < OtTestCase
 
@@ -46,4 +44,4 @@ class TC_modes < OtTestCase
   end
 end
 
-# Test::Unit::UI::Console::TestRunner.run(TC_modes, 3)
+OtTestCaseRunner.run(__FILE__)

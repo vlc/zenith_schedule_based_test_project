@@ -1,5 +1,4 @@
-require 'Utils/TestAssistant'
-require 'test/unit'
+require 'utils/spec/ot_test_suite'
 
 class TC_in_veh_skim < OtTestCase
 
@@ -116,4 +115,4 @@ class TC_in_veh_skim < OtTestCase
   end
 end
 
-# Test::Unit::UI::Console::TestRunner.run(TC_in_veh_skim, 3)
+OtTestCaseRunner.run(__FILE__)

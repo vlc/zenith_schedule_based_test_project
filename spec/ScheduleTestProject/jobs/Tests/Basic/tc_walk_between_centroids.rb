@@ -1,4 +1,4 @@
-require 'Utils/TestAssistant'
+require 'utils/spec/ot_test_suite'
 
 class TC_walk_between_centroid < OtTestCase
 
@@ -111,4 +111,4 @@ class TC_walk_between_centroid < OtTestCase
 
 end
 
-# Test::Unit::UI::Console::TestRunner.run(TC_walk_between_centroid, 3)
+OtTestCaseRunner.run(__FILE__)

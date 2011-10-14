@@ -143,7 +143,7 @@
   Predefined4=PT_oldschool$All Links$2$2$2$sum(load)$mode$sum(LOAD)$sum(load)$sum(density)$sum(LOAD)$sum(LOAD)$sum(LOAD)$1$30,40$10$1$1$1$$$$$$$$0$0.267$0.533$0.8$1.067$1.333$1.6$1.867$2.133$2.4$2.667$2.933$3.2$3.467$3.733$4$65408$61183$57087$52991$48895$44799$40703$36607$32511$28415$24319$20223$16127$12031$7935$3839$0$0$1.0000$0$3$0$0$0$$$$$$$0$0$Load (veh/h)$Density (veh/km)$0$0$$0.00000$0$All Transit lines$2$sum(load)$$0$$$$2$sum(LOAD)$sum(LOAD)$$$$0$0$0$0$0$0$0$0$1$1$0$$0$AM$Midday$$$$$$$$$$$$$$$0$70$0$$$$$$$$$$$$$$$$$1$Band Widths$0$Arial;0;10;$1$0$
 
 [Predefine Types]
-  Types=Bars$Labels for Areas$Labels for Counts$Labels for Links$Labels for Nodes$Labels for Screenlines$Labels for Stops$Labels for Transit$Labels for Turns$Labels for Zones$Loads$Queries$Reports
+  Types=Bars$Flows$Labels for Areas$Labels for Controls$Labels for Counts$Labels for Links$Labels for Nodes$Labels for Routes$Labels for Screenlines$Labels for Stops$Labels for Transit$Labels for Turns$Labels for Zones$Loads$Object Colors$Pies$Queries$Reports
 
 [Defaults]
   AutoScale=0

@@ -109,6 +109,7 @@
   AccessMode=40
   EgressMode=40
   ServiceSpread=5.0000000
+  TransferServiceSpread=0.0000000
   CandidateSpread=10.000000
   CandidateTreshold=0.0000000
   LineTreshold=0.0099999998
@@ -272,8 +273,8 @@
   Modes(11)=0,0,0,0,0,
   Periods(2)=0,0,0,0,0,0,0,0,0,0,
   Periods(3)=0,0,
-  ShowLabel=0
-  LabelDesign=$1$true$$Arial$0$Default$10$$0$16777215$0$1$@@@name@0@0@0@0@0@0@0@0:All@0:All@0:All
+  ShowLabel=1
+  LabelDesign=Number$1234433$true$$Arial$0$Default$10$$0$16777215$0$1$@@@linknr@0@0@0@0@0@0@0@0:All@0:All@0:All
   Font.Name=Arial
   Font.Color=0
   Font.Pitch=Default
@@ -795,7 +796,7 @@
   InfoLineRTF={\rtf1\ansi\ansicpg1252\deff0\deflang1033{\fonttbl{\f0\fnil\fcharset0 Tahoma;}}\viewkind4\uc1\pard\f0\fs16 \par }
 
 [Variable]
-  LoadDimensions(0)=1,1,1,1,1,0,
+  LoadDimensions(0)=1,40,10096,1,1,1,
   NrOfCentroids=2
   MaxCentroidNr=2
   NrOfNodes=5

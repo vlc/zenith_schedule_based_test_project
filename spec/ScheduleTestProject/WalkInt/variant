@@ -109,6 +109,7 @@
   AccessMode=40
   EgressMode=40
   ServiceSpread=5.0000000
+  TransferServiceSpread=0.0000000
   CandidateSpread=10.000000
   CandidateTreshold=0.0000000
   LineTreshold=0.0099999998

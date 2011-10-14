@@ -1,6 +1,4 @@
-require 'Utils/TestAssistant'
-
-require 'test/unit'
+require 'utils/spec/ot_test_suite'
 
 class TC_fares < OtTestCase
 
@@ -205,4 +203,4 @@ class TC_fares < OtTestCase
 
 end
 
-# Test::Unit::UI::Console::TestRunner.run(TC_fares, 3)
+OtTestCaseRunner.run(__FILE__)

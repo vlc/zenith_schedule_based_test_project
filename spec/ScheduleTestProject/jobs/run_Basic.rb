@@ -1,2 +1,2 @@
-require 'utils/ot_test_suite'
+require 'utils/spec/ot_test_suite'
 OtTestRunner.new('Basic').run

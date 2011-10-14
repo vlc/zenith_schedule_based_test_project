@@ -1,6 +1,4 @@
-require 'Utils/TestAssistant'
-require 'utils/ot_test_suite'
-require 'test/unit'
+require 'utils/spec/ot_test_suite'
 
 class TC_penalty < OtTestCase
 
@@ -67,5 +65,4 @@ class TC_penalty < OtTestCase
   end
 end
 
-#require 'test/unit/ui/console/testrunner'
-#Test::Unit::UI::Console::TestRunner.run(TC_penalty, 3)
+OtTestCaseRunner.run(__FILE__)
