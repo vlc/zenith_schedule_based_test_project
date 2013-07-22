@@ -25,7 +25,7 @@ class TC_loading_profile < OtTestCase
       # loading profile defaults to uniform distribution (#@tr.scheduleDepartureFractions = [1.0])
       # time step defaults to 5 minutes
 
-      @timePeriods.each { |t| create_matrix([1,30,t,1,1,1], 2, [[1,2,10]]) }
+      @timePeriods.each { |t| create_matrix([1,30,t,1,1,1], [[1,2,10]]) }
       @tr.odMatrix = [1,30,@timePeriods,1,1,1]
       @tr.load = [1,30,10,1,1,1]
 
@@ -59,7 +59,7 @@ class TC_loading_profile < OtTestCase
       # loading profile defaults to uniform distribution 
       # @tr.scheduleDepartureFractions = [1.0/3.0] * 3
 
-      create_matrix([1,30,10050,1,1,1], 2, [[1,2,10]]) 
+      create_matrix([1,30,10050,1,1,1], [[1,2,10]])
       @tr.odMatrix = [1,30,10050,1,1,1]
       @tr.load = [1,30,10,1,1,1]
 

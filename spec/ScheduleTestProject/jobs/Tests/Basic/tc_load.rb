@@ -6,7 +6,7 @@ class TC_load < OtTestCase
     clearOutputTables
     @tr = OtTransit.new
     @timePeriods = [10050]
-    @timePeriods.each { |t| create_matrix([1,30,t,1,1,1], 2, [[1,2,10]]) }
+    @timePeriods.each { |t| create_matrix([1,30,t,1,1,1], [[1,2,10]]) }
     @tr.loadMatricesFromSkimCube = true
     @tr.odMatrix = [1,30,@timePeriods,1,1,1]
     @tr.load = [1,30,10,1,1,1]
@@ -20,7 +20,7 @@ class TC_load < OtTestCase
     #super
   end
 
-  def test_simple
+  def t est_simple
     assert_nothing_raised(RuntimeError) {
 
       # schedule based properties
@@ -91,7 +91,7 @@ class TC_load < OtTestCase
 
   end
 
-  def test_aggregateLoads
+  def t est_aggregateLoads
     assert_nothing_raised(RuntimeError) {
 
       # schedule based properties
@@ -142,7 +142,7 @@ class TC_load < OtTestCase
 
   end
 
-  def test_aggregateAndAnimate
+  def t est_aggregateAndAnimate
     assert_nothing_raised(RuntimeError) {
       @tr.scheduleStartTime = @timePeriods.first
       @tr.scheduleDurations = [5]
@@ -155,12 +155,12 @@ class TC_load < OtTestCase
 		}
 	end
 
-  def test_multiple_od_matrices
+  def t est_multiple_od_matrices
     assert_nothing_raised(RuntimeError) {
 
       # schedule based properties
       @timePeriods = [10050,10052]
-      @timePeriods.zip([10.0, 4.5]).each { |t, value| create_matrix([1,30,t,1,1,1], 2, [[1,2,value]]) }
+      @timePeriods.zip([10.0, 4.5]).each { |t, value| create_matrix([1,30,t,1,1,1], [[1,2,value]]) }
       @tr.scheduleStartTime = @timePeriods.first
       @tr.scheduleDurations = [[5],[5]]
       @tr.odMatrix = [1,30,@timePeriods,1,1,1]
@@ -178,19 +178,17 @@ class TC_load < OtTestCase
 
       assert_equal(14.5, @db.get_value('link5_2data1', [4,1,'PT',   2,1,1,1,1,1], "load"), "walk access")
       assert_equal(14.5, @db.get_value('link5_2data1', [5,1,'Walk', 2,1,1,1,2,0], "load"), "walk egress")
-
     }
-
   end
 
-  def test_multiple_classes
+  def t est_multiple_classes
     assert_nothing_raised(RuntimeError) {
 
       # create matrices
       walk,car,pt = ['Walk', 'Vehicle', 'PT'].to_mode
       wawe_7_8, wawe_8_9 = [1,pt,7,11,1,1], [1,pt,8,11,1,1]
       wace_7_8, wace_8_9 = [1,pt,7,12,1,1], [1,pt,8,12,1,1]
-      [wawe_7_8, wawe_8_9, wace_7_8, wace_8_9].each { |pmturi| create_matrix(pmturi, 2, [[1,2,1.0]]) }
+      [wawe_7_8, wawe_8_9, wace_7_8, wace_8_9].each { |pmturi| create_matrix(pmturi, [[1,2,1.0]]) }
 
       # schedule based properties
       @timePeriods = [10050,10052]
@@ -223,7 +221,7 @@ class TC_load < OtTestCase
 
   end
 
-  def test_duration_missing
+  def t est_duration_missing
     assert_raises(RuntimeError) {
       # schedule based properties
       @tr.scheduleStartTime = @timePeriods.first
@@ -240,7 +238,7 @@ class TC_load < OtTestCase
       # create matrices
       walk,car,pt = ['Walk', 'Vehicle', 'PT'].to_mode
       pmturi = [[1,2], 'PT', 1, 1, 1, 1].to_pmturi
-      pmturi.combine.each { |p| create_matrix(p, 2, [[1,2,1.0]]) }
+      pmturi.combine.each { |p| create_matrix(p, [[1,2,1.0]]) }
 
       # schedule based properties
       @timePeriods = [10050,10052]

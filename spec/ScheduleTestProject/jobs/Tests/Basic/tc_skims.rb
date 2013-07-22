@@ -7,7 +7,7 @@ class TC_skim < OtTestCase
     set_fare_system({1 => 1})
     @tr = OtTransit.new
     @timePeriods = [10050]
-    @timePeriods.each { |t| create_matrix([1,30,t,1,1,1], 2, [[1,2,10]]) }
+    @timePeriods.each { |t| create_matrix([1,30,t,1,1,1], [[1,2,10]]) }
     @tr.loadMatricesFromSkimCube = true
     @tr.odMatrix = [1,30,@timePeriods,1,1,1]
     @tr.load = [1,30,10,1,1,1]
@@ -46,7 +46,7 @@ class TC_skim < OtTestCase
       @tr.scheduleStartTime = @timePeriods.first
       odMatrices = [11,12].map { |u|
         pmturi = [1,30,@timePeriods.first,u,1,1]
-        create_matrix(pmturi, 2, [[1,2,10]])
+        create_matrix(pmturi, [[1,2,10]])
         pmturi
       }
 
@@ -159,7 +159,7 @@ class TC_skim < OtTestCase
 
       # schedule based properties
       @timePeriods = [10040,10050]
-      @timePeriods.zip([10.0, 5.0]).each { |t, value| create_matrix([1,30,t,1,1,1], 2, [[1,2,value]]) }
+      @timePeriods.zip([10.0, 5.0]).each { |t, value| create_matrix([1,30,t,1,1,1], [[1,2,value]]) }
       @tr.scheduleStartTime = @timePeriods.first
       @tr.scheduleDurations = [[5,5],[5]]
       @tr.skimMatrix = [1,1,1,1,1,1]
