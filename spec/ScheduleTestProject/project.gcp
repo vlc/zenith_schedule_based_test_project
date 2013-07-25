@@ -1,158 +1,235 @@
 
-[Format]
-  Matrix=omnitrans
-
-[Print Preview]
-  Flags=0
-  ShowCmd=1
-  MinMaxPos=-1,-1,0,0
-  NormPos=411,107,948,531
-  PrinterPortrait_Checked=false
-  PrinterLandscape_Checked=true
-  HideText_Checked=false
-  Border1_Checked=true
-  Legend_Checked=true
-  Border_Checked=true
-  cSubTitleValue_Text=Tutorial (Houten)
-  cDescriptionValue_Text=
-  cDescription_Text=Description
-  cFile_Text=File
-  cFileValue_Text=
-  Predefined2=Name$1234442$true$$Arial$0$Default$10$$0$16777215$0$1$@@@name@0@0@0@0@0@0@0@0:All@0:All@0:All
-  Predefined3=Tag$1234442$true$$Arial$0$Default$10$$0$16777215$0$1$@@@areatag@0@0@0@0@0@0@0@0:All@0:All@0:All
-  Predefined4=Number; Name$1234442$true$$Arial$0$Default$10$$0$16777215$0$1$@@;@areanr@0@0@0@0@0@0@0@0:All@0:All@0:All$@@;@name@0@0@0@0@0@0@0@0:All@0:All@0:All
-  Predefined5=Name; Tag$1234442$true$$Arial$0$Default$10$$0$16777215$0$1$@@;@name@0@0@0@0@0@0@0@0:All@0:All@0:All$@@;@areatag@0@0@0@0@0@0@0@0:All@0:All@0:All
-  0@0@0@0@0@0@0:All@0:All@0:All=
-  Predefined4=Number; Name$1234442$true$$Arial$0$Default$10$$0$16777215$0$1$@@;@stopnr@0@0@0@0@0@0@0@0:All@0:All@0:All$@@;@name@0@0@0@0@0@0@0@0:All@0:All@0:All
-  Predefined5=Name; Tag$1234442$true$$Arial$0$Default$10$$0$16777215$0$1$@@;@name@0@0@0@0@0@0@0@0:All@0:All@0:All$@@;@stoptag@0@0@0@0@0@0@0@0:All@0:All@0:All
-  Predefined6=Number; Tag$1234442$true$$Arial$0$Default$10$$0$16777215$0$1$@@;@stopnr@0@0@0@0@0@0@0@0:All@0:All@0:All$@@;@stoptag@0@0@0@0@0@0@0@0:All@0:All@0:All
-  Predefined7=Number; Name; Tag$1234442$true$$Arial$0$Default$10$$0$16777215$0$1$@@;@stopnr@0@0@0@0@0@0@0@0:All@0:All@0:All$@@;@name@0@0@0@0@0@0@0@0:All@0:All@0:All$@@;@stoptag@0@0@0@0@0@0@0@0:All@0:All@0:All
-
-[Predefined Labels for Counts]
-  PreDefines=7
-  Predefined1=Number$1234442$true$$Arial$0$Default$10$$0$16777215$0$1$@@@countnr@0@0@0@0@0@0@0@0:All@0:All@0:All
-  Predefined2=Name$1234442$true$$Arial$0$Default$10$$0$16777215$0$1$@@@name@0@0@0@0@0@0@0@0:All@0:All@0:All
-  Predefined3=Tag$1234442$true$$Arial$0$Default$10$$0$16777215$0$1$@@@counttag@0@0@0@0@0@0@0@0:All@0:All@0:All
-  Predefined4=Number; Name$1234442$true$$Arial$0$Default$10$$0$16777215$0$1$@@;@countnr@0@0@0@0@0@0@0@0:All@0:All@0:All$@@;@name@0@0@0@0@0@0@0@0:All@0:All@0:All
-  Predefined5=Name; Tag$1234442$true$$Arial$0$Default$10$$0$16777215$0$1$@@;@name@0@0@0@0@0@0@0@0:All@0:All@0:All$@@;@counttag@0@0@0@0@0@0@0@0:All@0:All@0:All
-  Predefined6=Number; Tag$1234442$true$$Arial$0$Default$10$$0$16777215$0$1$@@;@countnr@0@0@0@0@0@0@0@0:All@0:All@0:All$@@;@counttag@0@0@0@0@0@0@0@0:All@0:All@0:All
-  Predefined7=Number; Name; Tag$1234442$true$$Arial$0$Default$10$$0$16777215$0$1$@@;@countnr@0@0@0@0@0@0@0@0:All@0:All@0:All$@@;@name@0@0@0@0@0@0@0@0:All@0:All@0:All$@@;@counttag@0@0@0@0@0@0@0@0:All@0:All@0:All
+[Predefined Labels for Turns]
+  Predefined1=Number$1234442$1$$Arial;0;10;$0$16777215$0$1$-1.0$-1.0$1$@@@turnnr@@0@0@0@0@0@0@0:All@0:All@0:All$
+  Predefined1.Category=0
+  Predefined2=Name$1234442$1$$Arial;0;10;$0$16777215$0$1$-1.0$-1.0$1$@@@name@@0@0@0@0@0@0@0:All@0:All@0:All$
+  Predefined2.Category=0
+  Predefined3=Tag$1234442$1$$Arial;0;10;$0$16777215$0$1$-1.0$-1.0$1$@@@turntag@@0@0@0@0@0@0@0:All@0:All@0:All$
+  Predefined3.Category=0
+  Predefined4=Number; Name$1234442$1$$Arial;0;10;$0$16777215$0$1$-1.0$-1.0$2$@@;@turnnr@@0@0@0@0@0@0@0:All@0:All@0:All$@@;@name@@0@0@0@0@0@0@0:All@0:All@0:All$
+  Predefined4.Category=0
+  Predefined5=Name; Tag$1234442$1$$Arial;0;10;$0$16777215$0$1$-1.0$-1.0$2$@@;@name@@0@0@0@0@0@0@0:All@0:All@0:All$@@;@turntag@@0@0@0@0@0@0@0:All@0:All@0:All$
+  Predefined5.Category=0
+  Predefined6=Number; Tag$1234442$1$$Arial;0;10;$0$16777215$0$1$-1.0$-1.0$2$@@;@turnnr@@0@0@0@0@0@0@0:All@0:All@0:All$@@;@turntag@@0@0@0@0@0@0@0:All@0:All@0:All$
+  Predefined6.Category=0
+  Predefined7=Number; Name; Tag$1234442$1$$Arial;0;10;$0$16777215$0$1$-1.0$-1.0$3$@@;@turnnr@@0@0@0@0@0@0@0:All@0:All@0:All$@@;@name@@0@0@0@0@0@0@0:All@0:All@0:All$@@;@turntag@@0@0@0@0@0@0@0:All@0:All@0:All$
+  Predefined7.Category=0
+  Categories=0
+  Predefines=7
 
 [Project]
   Name=ScheduleTestProject
   OrderNr=0
   Level=0
   Categories=
+  ExpandedCategories=
 
 [Views]
   nViews=0
 
 [Predefined Bars]
-  PreDefines=1
-  Predefined1=test$All Stops$0$0.50000$100$0$Bar1@sum(transfer);<Current Variant>;<Current Matrix Cube>@0;0;0;0;0;0;0;0;<none>$16711680$8421376$14162117$1305701$218364$65535$16744703$16711680$16711680$8421376$14162117$1305701$218364$65535$16744703$16711680$0$0.00000$$$0$4$80$0$1$Histograms$All Transit lines$All Stops$All Centroids$Arial;0;10;$0$
+  Predefined1=test$All Stops$0$0.50000$100$0$Bar1@sum(transfer);<Current Variant>;<Current Matrix Cube>@0;0;0;0;0;0;0;0;<none>$16711680$8421376$14162117$1305701$218364$65535$16744703$16711680$16711680$8421376$14162117$1305701$218364$65535$16744703$16711680$0$0.00000$$$0$4$80$0$1$Histograms$All Transit lines$All Stops$All Centroids$Arial;0;10;$0
+  Predefined1.Category=0
+  Categories=0
+  Predefines=1
+
+[Predefined Flows]
+  Categories=0
 
 [Predefined Labels for Areas]
-  PreDefines=7
-  Predefined1=Number$1234442$true$$Arial$0$Default$10$$0$16777215$0$1$@@@areanr@0@0@0@0@0@0@0@0:All@0:All@0:All
-  Predefined2=Name$1234442$true$$Arial$0$Default$10$$0$16777215$0$1$@@@name@0@0@0@0@0@0@0@0:All@0:All@0:All
-  Predefined3=Tag$1234442$true$$Arial$0$Default$10$$0$16777215$0$1$@@@areatag@0@0@0@0@0@0@0@0:All@0:All@0:All
-  Predefined4=Number; Name$1234442$true$$Arial$0$Default$10$$0$16777215$0$1$@@;@areanr@0@0@0@0@0@0@0@0:All@0:All@0:All$@@;@name@0@0@0@0@0@0@0@0:All@0:All@0:All
-  Predefined5=Name; Tag$1234442$true$$Arial$0$Default$10$$0$16777215$0$1$@@;@name@0@0@0@0@0@0@0@0:All@0:All@0:All$@@;@areatag@0@0@0@0@0@0@0@0:All@0:All@0:All
-  Predefined6=Number; Tag$1234442$true$$Arial$0$Default$10$$0$16777215$0$1$@@;@areanr@0@0@0@0@0@0@0@0:All@0:All@0:All$@@;@areatag@0@0@0@0@0@0@0@0:All@0:All@0:All
-  Predefined7=Number; Name; Tag$1234442$true$$Arial$0$Default$10$$0$16777215$0$1$@@;@areanr@0@0@0@0@0@0@0@0:All@0:All@0:All$@@;@name@0@0@0@0@0@0@0@0:All@0:All@0:All$@@;@areatag@0@0@0@0@0@0@0@0:All@0:All@0:All
+  Predefined1=Number$1234442$1$$Arial;0;10;$0$16777215$0$1$-1.0$-1.0$1$@@@areanr@@0@0@0@0@0@0@0:All@0:All@0:All$
+  Predefined1.Category=0
+  Predefined2=Name$1234442$1$$Arial;0;10;$0$16777215$0$1$-1.0$-1.0$1$@@@name@@0@0@0@0@0@0@0:All@0:All@0:All$
+  Predefined2.Category=0
+  Predefined3=Tag$1234442$1$$Arial;0;10;$0$16777215$0$1$-1.0$-1.0$1$@@@areatag@@0@0@0@0@0@0@0:All@0:All@0:All$
+  Predefined3.Category=0
+  Predefined4=Number; Name$1234442$1$$Arial;0;10;$0$16777215$0$1$-1.0$-1.0$2$@@;@areanr@@0@0@0@0@0@0@0:All@0:All@0:All$@@;@name@@0@0@0@0@0@0@0:All@0:All@0:All$
+  Predefined4.Category=0
+  Predefined5=Name; Tag$1234442$1$$Arial;0;10;$0$16777215$0$1$-1.0$-1.0$2$@@;@name@@0@0@0@0@0@0@0:All@0:All@0:All$@@;@areatag@@0@0@0@0@0@0@0:All@0:All@0:All$
+  Predefined5.Category=0
+  Predefined6=Number; Tag$1234442$1$$Arial;0;10;$0$16777215$0$1$-1.0$-1.0$2$@@;@areanr@@0@0@0@0@0@0@0:All@0:All@0:All$@@;@areatag@@0@0@0@0@0@0@0:All@0:All@0:All$
+  Predefined6.Category=0
+  Predefined7=Number; Name; Tag$1234442$1$$Arial;0;10;$0$16777215$0$1$-1.0$-1.0$3$@@;@areanr@@0@0@0@0@0@0@0:All@0:All@0:All$@@;@name@@0@0@0@0@0@0@0:All@0:All@0:All$@@;@areatag@@0@0@0@0@0@0@0:All@0:All@0:All$
+  Predefined7.Category=0
+  Categories=0
+  Predefines=7
+
+[Predefined Labels for Controls]
+  Categories=0
+
+[Predefined Labels for Counts]
+  Predefined1=Number$1234442$1$$Arial;0;10;$0$16777215$0$1$-1.0$-1.0$1$@@@countnr@@0@0@0@0@0@0@0:All@0:All@0:All$
+  Predefined1.Category=0
+  Predefined2=Name$1234442$1$$Arial;0;10;$0$16777215$0$1$-1.0$-1.0$1$@@@name@@0@0@0@0@0@0@0:All@0:All@0:All$
+  Predefined2.Category=0
+  Predefined3=Tag$1234442$1$$Arial;0;10;$0$16777215$0$1$-1.0$-1.0$1$@@@counttag@@0@0@0@0@0@0@0:All@0:All@0:All$
+  Predefined3.Category=0
+  Predefined4=Number; Name$1234442$1$$Arial;0;10;$0$16777215$0$1$-1.0$-1.0$2$@@;@countnr@@0@0@0@0@0@0@0:All@0:All@0:All$@@;@name@@0@0@0@0@0@0@0:All@0:All@0:All$
+  Predefined4.Category=0
+  Predefined5=Name; Tag$1234442$1$$Arial;0;10;$0$16777215$0$1$-1.0$-1.0$2$@@;@name@@0@0@0@0@0@0@0:All@0:All@0:All$@@;@counttag@@0@0@0@0@0@0@0:All@0:All@0:All$
+  Predefined5.Category=0
+  Predefined6=Number; Tag$1234442$1$$Arial;0;10;$0$16777215$0$1$-1.0$-1.0$2$@@;@countnr@@0@0@0@0@0@0@0:All@0:All@0:All$@@;@counttag@@0@0@0@0@0@0@0:All@0:All@0:All$
+  Predefined6.Category=0
+  Predefined7=Number; Name; Tag$1234442$1$$Arial;0;10;$0$16777215$0$1$-1.0$-1.0$3$@@;@countnr@@0@0@0@0@0@0@0:All@0:All@0:All$@@;@name@@0@0@0@0@0@0@0:All@0:All@0:All$@@;@counttag@@0@0@0@0@0@0@0:All@0:All@0:All$
+  Predefined7.Category=0
+  Categories=0
+  Predefines=7
 
 [Predefined Labels for Links]
-  PreDefines=11
-  Predefined1=Number$1234433$true$$Arial$0$Default$10$$0$16777215$0$1$@@@linknr@0@0@0@0@0@0@0@0:All@0:All@0:All
-  Predefined2=Name$1234433$true$$Arial$0$Default$10$$0$16777215$0$1$@@@name@0@0@0@0@0@0@0@0:All@0:All@0:All
-  Predefined3=Tag$1234433$true$$Arial$0$Default$10$$0$16777215$0$1$@@@linktag@0@0@0@0@0@0@0@0:All@0:All@0:All
-  Predefined4=Number; Name$1234433$true$$Arial$0$Default$10$$0$16777215$0$1$@@;@linknr@0@0@0@0@0@0@0@0:All@0:All@0:All$@@;@name@0@0@0@0@0@0@0@0:All@0:All@0:All
-  Predefined5=Name; Tag$1234433$true$$Arial$0$Default$10$$0$16777215$0$1$@@;@name@0@0@0@0@0@0@0@0:All@0:All@0:All$@@;@linktag@0@0@0@0@0@0@0@0:All@0:All@0:All
-  Predefined6=Number; Tag$1234433$true$$Arial$0$Default$10$$0$16777215$0$1$@@;@linknr@0@0@0@0@0@0@0@0:All@0:All@0:All$@@;@linktag@0@0@0@0@0@0@0@0:All@0:All@0:All
-  Predefined7=Number; Name; Tag$1234433$true$$Arial$0$Default$10$$0$16777215$0$1$@@;@linknr@0@0@0@0@0@0@0@0:All@0:All@0:All$@@;@name@0@0@0@0@0@0@0@0:All@0:All@0:All$@@;@linktag@0@0@0@0@0@0@0@0:All@0:All@0:All
-  Predefined8=Road Number$1234433$true$$Arial$0$Default$10$$0$16777215$0$1$@@@roadnumber@0@0@0@0@0@0@0@0:All@0:All@0:All
-  Predefined9=Link Type Number$1234433$true$$Arial$0$Default$10$$0$16777215$0$1$@@@typenr@0@0@0@0@0@0@0@0:All@0:All@0:All
-  Predefined10=Screenline Number$1234433$true$$Arial$0$Default$10$$0$16777215$0$1$@@@screenlinenr@0@0@0@0@0@0@0@0:All@0:All@0:All
-  Predefined11=Transitline Number$1234433$true$$Arial$0$Default$10$$0$16777215$0$1$@@@transitlinenr@0@0@0@0@0@0@0@0:All@0:All@0:All
+  Predefined1=Number$1234433$1$$Arial;0;10;$0$16777215$0$1$-1.0$-1.0$1$@@@linknr@@0@0@0@0@0@0@0:All@0:All@0:All$
+  Predefined1.Category=0
+  Predefined2=Name$1234433$1$$Arial;0;10;$0$16777215$0$1$-1.0$-1.0$1$@@@name@@0@0@0@0@0@0@0:All@0:All@0:All$
+  Predefined2.Category=0
+  Predefined3=Tag$1234433$1$$Arial;0;10;$0$16777215$0$1$-1.0$-1.0$1$@@@linktag@@0@0@0@0@0@0@0:All@0:All@0:All$
+  Predefined3.Category=0
+  Predefined4=Number; Name$1234433$1$$Arial;0;10;$0$16777215$0$1$-1.0$-1.0$2$@@;@linknr@@0@0@0@0@0@0@0:All@0:All@0:All$@@;@name@@0@0@0@0@0@0@0:All@0:All@0:All$
+  Predefined4.Category=0
+  Predefined5=Name; Tag$1234433$1$$Arial;0;10;$0$16777215$0$1$-1.0$-1.0$2$@@;@name@@0@0@0@0@0@0@0:All@0:All@0:All$@@;@linktag@@0@0@0@0@0@0@0:All@0:All@0:All$
+  Predefined5.Category=0
+  Predefined6=Number; Tag$1234433$1$$Arial;0;10;$0$16777215$0$1$-1.0$-1.0$2$@@;@linknr@@0@0@0@0@0@0@0:All@0:All@0:All$@@;@linktag@@0@0@0@0@0@0@0:All@0:All@0:All$
+  Predefined6.Category=0
+  Predefined7=Number; Name; Tag$1234433$1$$Arial;0;10;$0$16777215$0$1$-1.0$-1.0$3$@@;@linknr@@0@0@0@0@0@0@0:All@0:All@0:All$@@;@name@@0@0@0@0@0@0@0:All@0:All@0:All$@@;@linktag@@0@0@0@0@0@0@0:All@0:All@0:All$
+  Predefined7.Category=0
+  Predefined8=Road Number$1234433$1$$Arial;0;10;$0$16777215$0$1$-1.0$-1.0$1$@@@roadnumber@@0@0@0@0@0@0@0:All@0:All@0:All$
+  Predefined8.Category=0
+  Predefined9=Link Type Number$1234433$1$$Arial;0;10;$0$16777215$0$1$-1.0$-1.0$1$@@@typenr@@0@0@0@0@0@0@0:All@0:All@0:All$
+  Predefined9.Category=0
+  Predefined10=Screenline Number$1234433$1$$Arial;0;10;$0$16777215$0$1$-1.0$-1.0$1$@@@screenlinenr@@0@0@0@0@0@0@0:All@0:All@0:All$
+  Predefined10.Category=0
+  Predefined11=Transitline Number$1234433$1$$Arial;0;10;$0$16777215$0$1$-1.0$-1.0$1$@@@transitlinenr@@0@0@0@0@0@0@0:All@0:All@0:All$
+  Predefined11.Category=0
+  Categories=0
+  Predefines=11
 
 [Predefined Labels for Nodes]
-  PreDefines=7
-  Predefined1=Number$1234442$true$$Arial$0$Default$10$$0$16777215$0$1$@@@nodenr@0@0@0@0@0@0@0@0:All@0:All@0:All
-  Predefined2=Name$1234442$true$$Arial$0$Default$10$$0$16777215$0$1$@@@name@0@0@0@0@0@0@0@0:All@0:All@0:All
-  Predefined3=Tag$1234442$true$$Arial$0$Default$10$$0$16777215$0$1$@@@nodetag@0@0@0@0@0@0@0@0:All@0:All@0:All
-  Predefined4=Number; Name$1234442$true$$Arial$0$Default$10$$0$16777215$0$1$@@;@nodenr@0@0@0@0@0@0@0@0:All@0:All@0:All$@@;@name@0@0@0@0@0@0@0@0:All@0:All@0:All
-  Predefined5=Name; Tag$1234442$true$$Arial$0$Default$10$$0$16777215$0$1$@@;@name@0@0@0@0@0@0@0@0:All@0:All@0:All$@@;@nodetag@0@0@0@0@0@0@0@0:All@0:All@0:All
-  Predefined6=Number; Tag$1234442$true$$Arial$0$Default$10$$0$16777215$0$1$@@;@nodenr@0@0@0@0@0@0@0@0:All@0:All@0:All$@@;@nodetag@0@0@0@0@0@0@0@0:All@0:All@0:All
-  Predefined7=Number; Name; Tag$1234442$true$$Arial$0$Default$10$$0$16777215$0$1$@@;@nodenr@0@0@0@0@0@0@0@0:All@0:All@0:All$@@;@name@0@0@0@0@0@0@0@0:All@0:All@0:All$@@;@nodetag@0@0@0@0@0@0@0@0:All@0:All@0:All
+  Predefined1=Number$1234442$1$$Arial;0;10;$0$16777215$0$1$-1.0$-1.0$1$@@@nodenr@@0@0@0@0@0@0@0:All@0:All@0:All$
+  Predefined1.Category=0
+  Predefined2=Name$1234442$1$$Arial;0;10;$0$16777215$0$1$-1.0$-1.0$1$@@@name@@0@0@0@0@0@0@0:All@0:All@0:All$
+  Predefined2.Category=0
+  Predefined3=Tag$1234442$1$$Arial;0;10;$0$16777215$0$1$-1.0$-1.0$1$@@@nodetag@@0@0@0@0@0@0@0:All@0:All@0:All$
+  Predefined3.Category=0
+  Predefined4=Number; Name$1234442$1$$Arial;0;10;$0$16777215$0$1$-1.0$-1.0$2$@@;@nodenr@@0@0@0@0@0@0@0:All@0:All@0:All$@@;@name@@0@0@0@0@0@0@0:All@0:All@0:All$
+  Predefined4.Category=0
+  Predefined5=Name; Tag$1234442$1$$Arial;0;10;$0$16777215$0$1$-1.0$-1.0$2$@@;@name@@0@0@0@0@0@0@0:All@0:All@0:All$@@;@nodetag@@0@0@0@0@0@0@0:All@0:All@0:All$
+  Predefined5.Category=0
+  Predefined6=Number; Tag$1234442$1$$Arial;0;10;$0$16777215$0$1$-1.0$-1.0$2$@@;@nodenr@@0@0@0@0@0@0@0:All@0:All@0:All$@@;@nodetag@@0@0@0@0@0@0@0:All@0:All@0:All$
+  Predefined6.Category=0
+  Predefined7=Number; Name; Tag$1234442$1$$Arial;0;10;$0$16777215$0$1$-1.0$-1.0$3$@@;@nodenr@@0@0@0@0@0@0@0:All@0:All@0:All$@@;@name@@0@0@0@0@0@0@0:All@0:All@0:All$@@;@nodetag@@0@0@0@0@0@0@0:All@0:All@0:All$
+  Predefined7.Category=0
+  Categories=0
+  Predefines=7
+
+[Predefined Labels for Routes]
+  Categories=0
 
 [Predefined Labels for Screenlines]
-  PreDefines=7
-  Predefined1=Number$1234442$true$$Arial$0$Default$10$$0$16777215$0$1$@@@screenlinenr@0@0@0@0@0@0@0@0:All@0:All@0:All
-  Predefined2=Name$1234442$true$$Arial$0$Default$10$$0$16777215$0$1$@@@name@0@0@0@0@0@0@0@0:All@0:All@0:All
-  Predefined3=Tag$1234442$true$$Arial$0$Default$10$$0$16777215$0$1$@@@screentag@0@0@0@0@0@0@0@0:All@0:All@0:All
-  Predefined4=Number; Name$1234442$true$$Arial$0$Default$10$$0$16777215$0$1$@@;@screenlinenr@0@0@0@0@0@0@0@0:All@0:All@0:All$@@;@name@0@0@0@0@0@0@0@0:All@0:All@0:All
-  Predefined5=Name; Tag$1234442$true$$Arial$0$Default$10$$0$16777215$0$1$@@;@name@0@0@0@0@0@0@0@0:All@0:All@0:All$@@;@screentag@0@0@0@0@0@0@0@0:All@0:All@0:All
-  Predefined6=Number; Tag$1234442$true$$Arial$0$Default$10$$0$16777215$0$1$@@;@screenlinenr@0@0@0@0@0@0@0@0:All@0:All@0:All$@@;@screentag@0@0@0@0@0@0@0@0:All@0:All@0:All
-  Predefined7=Number; Name; Tag$1234442$true$$Arial$0$Default$10$$0$16777215$0$1$@@;@screenlinenr@0@0@0@0@0@0@0@0:All@0:All@0:All$@@;@name@0@0@0@0@0@0@0@0:All@0:All@0:All$@@;@screentag@0@0@0@0@0@0@0@0:All@0:All@0:All
+  Predefined1=Number$1234442$1$$Arial;0;10;$0$16777215$0$1$-1.0$-1.0$1$@@@screenlinenr@@0@0@0@0@0@0@0:All@0:All@0:All$
+  Predefined1.Category=0
+  Predefined2=Name$1234442$1$$Arial;0;10;$0$16777215$0$1$-1.0$-1.0$1$@@@name@@0@0@0@0@0@0@0:All@0:All@0:All$
+  Predefined2.Category=0
+  Predefined3=Tag$1234442$1$$Arial;0;10;$0$16777215$0$1$-1.0$-1.0$1$@@@screentag@@0@0@0@0@0@0@0:All@0:All@0:All$
+  Predefined3.Category=0
+  Predefined4=Number; Name$1234442$1$$Arial;0;10;$0$16777215$0$1$-1.0$-1.0$2$@@;@screenlinenr@@0@0@0@0@0@0@0:All@0:All@0:All$@@;@name@@0@0@0@0@0@0@0:All@0:All@0:All$
+  Predefined4.Category=0
+  Predefined5=Name; Tag$1234442$1$$Arial;0;10;$0$16777215$0$1$-1.0$-1.0$2$@@;@name@@0@0@0@0@0@0@0:All@0:All@0:All$@@;@screentag@@0@0@0@0@0@0@0:All@0:All@0:All$
+  Predefined5.Category=0
+  Predefined6=Number; Tag$1234442$1$$Arial;0;10;$0$16777215$0$1$-1.0$-1.0$2$@@;@screenlinenr@@0@0@0@0@0@0@0:All@0:All@0:All$@@;@screentag@@0@0@0@0@0@0@0:All@0:All@0:All$
+  Predefined6.Category=0
+  Predefined7=Number; Name; Tag$1234442$1$$Arial;0;10;$0$16777215$0$1$-1.0$-1.0$3$@@;@screenlinenr@@0@0@0@0@0@0@0:All@0:All@0:All$@@;@name@@0@0@0@0@0@0@0:All@0:All@0:All$@@;@screentag@@0@0@0@0@0@0@0:All@0:All@0:All$
+  Predefined7.Category=0
+  Categories=0
+  Predefines=7
 
 [Predefined Labels for Stops]
-  PreDefines=7
-  Predefined1=Number$1234442$true$$Arial$0$Default$10$$0$16777215$0$1$@@@stopnr@0@0@0@0@0@0@0@0:All@0:All@0:All
-  Predefined2=Name$1234442$true$$Arial$0$Default$10$$0$16777215$0$1$@@@name@0@0@0@0@0@0@0@0:All@0:All@0:All
-  Predefined3=Tag$1234442$true$$Arial$0$Default$10$$0$16777215$0$1$@@@stoptag@0@0@0@0@0@0@0@0:All@0:All@0:All
-  Predefined4=Number; Name$1234442$true$$Arial$0$Default$10$$0$16777215$0$1$@@;@stopnr@0@0@0@0@0@0@0@0:All@0:All@0:All$@@;@name@0@0@0@0@0@0@0@0:All@0:All@0:All
-  Predefined5=Name; Tag$1234442$true$$Arial$0$Default$10$$0$16777215$0$1$@@;@name@0@0@0@0@0@0@0@0:All@0:All@0:All$@@;@stoptag@0@0@0@0@0@0@0@0:All@0:All@0:All
-  Predefined6=Number; Tag$1234442$true$$Arial$0$Default$10$$0$16777215$0$1$@@;@stopnr@0@0@0@0@0@0@0@0:All@0:All@0:All$@@;@stoptag@0@0@0@0@0@0@0@0:All@0:All@0:All
-  Predefined7=Number; Name; Tag$1234442$true$$Arial$0$Default$10$$0$16777215$0$1$@@;@stopnr@0@0@0@0@0@0@0@0:All@0:All@0:All$@@;@name@0@0@0@0@0@0@0@0:All@0:All@0:All$@@;@stoptag@0@0@0@0@0@0@0@0:All@0:All@0:All
+  Predefined1=Number$1234442$1$$Arial;0;10;$0$16777215$0$1$-1.0$-1.0$1$@@@stopnr@@0@0@0@0@0@0@0:All@0:All@0:All$
+  Predefined1.Category=0
+  Predefined2=Name$1234442$1$$Arial;0;10;$0$16777215$0$1$-1.0$-1.0$1$@@@name@@0@0@0@0@0@0@0:All@0:All@0:All$
+  Predefined2.Category=0
+  Predefined3=Tag$1234442$1$$Arial;0;10;$0$16777215$0$1$-1.0$-1.0$1$@@@stoptag@@0@0@0@0@0@0@0:All@0:All@0:All$
+  Predefined3.Category=0
+  Predefined4=Number; Name$1234442$1$$Arial;0;10;$0$16777215$0$1$-1.0$-1.0$2$@@;@stopnr@@0@0@0@0@0@0@0:All@0:All@0:All$@@;@name@@0@0@0@0@0@0@0:All@0:All@0:All$
+  Predefined4.Category=0
+  Predefined5=Name; Tag$1234442$1$$Arial;0;10;$0$16777215$0$1$-1.0$-1.0$2$@@;@name@@0@0@0@0@0@0@0:All@0:All@0:All$@@;@stoptag@@0@0@0@0@0@0@0:All@0:All@0:All$
+  Predefined5.Category=0
+  Predefined6=Number; Tag$1234442$1$$Arial;0;10;$0$16777215$0$1$-1.0$-1.0$2$@@;@stopnr@@0@0@0@0@0@0@0:All@0:All@0:All$@@;@stoptag@@0@0@0@0@0@0@0:All@0:All@0:All$
+  Predefined6.Category=0
+  Predefined7=Number; Name; Tag$1234442$1$$Arial;0;10;$0$16777215$0$1$-1.0$-1.0$3$@@;@stopnr@@0@0@0@0@0@0@0:All@0:All@0:All$@@;@name@@0@0@0@0@0@0@0:All@0:All@0:All$@@;@stoptag@@0@0@0@0@0@0@0:All@0:All@0:All$
+  Predefined7.Category=0
+  Categories=0
+  Predefines=7
 
 [Predefined Labels for Transit]
-  PreDefines=7
-  Predefined1=Number$1234442$true$$Arial$0$Default$10$$0$16777215$0$1$@@@transitlinenr@0@0@0@0@0@0@0@0:All@0:All@0:All
-  Predefined2=Name$1234442$true$$Arial$0$Default$10$$0$16777215$0$1$@@@name@0@0@0@0@0@0@0@0:All@0:All@0:All
-  Predefined3=Tag$1234442$true$$Arial$0$Default$10$$0$16777215$0$1$@@@transittag@0@0@0@0@0@0@0@0:All@0:All@0:All
-  Predefined4=Number; Name$1234442$true$$Arial$0$Default$10$$0$16777215$0$1$@@;@transitlinenr@0@0@0@0@0@0@0@0:All@0:All@0:All$@@;@name@0@0@0@0@0@0@0@0:All@0:All@0:All
-  Predefined5=Name; Tag$1234442$true$$Arial$0$Default$10$$0$16777215$0$1$@@;@name@0@0@0@0@0@0@0@0:All@0:All@0:All$@@;@transittag@0@0@0@0@0@0@0@0:All@0:All@0:All
-  Predefined6=Number; Tag$1234442$true$$Arial$0$Default$10$$0$16777215$0$1$@@;@transitlinenr@0@0@0@0@0@0@0@0:All@0:All@0:All$@@;@transittag@0@0@0@0@0@0@0@0:All@0:All@0:All
-  Predefined7=Number; Name; Tag$1234442$true$$Arial$0$Default$10$$0$16777215$0$1$@@;@transitlinenr@0@0@0@0@0@0@0@0:All@0:All@0:All$@@;@name@0@0@0@0@0@0@0@0:All@0:All@0:All$@@;@transittag@0@0@0@0@0@0@0@0:All@0:All@0:All
-
-[Predefined Labels for Turns]
-  PreDefines=7
-  Predefined1=Number$1234442$true$$Arial$0$Default$10$$0$16777215$0$1$@@@turnnr@0@0@0@0@0@0@0@0:All@0:All@0:All
-  Predefined2=Name$1234442$true$$Arial$0$Default$10$$0$16777215$0$1$@@@name@0@0@0@0@0@0@0@0:All@0:All@0:All
-  Predefined3=Tag$1234442$true$$Arial$0$Default$10$$0$16777215$0$1$@@@turntag@0@0@0@0@0@0@0@0:All@0:All@0:All
-  Predefined4=Number; Name$1234442$true$$Arial$0$Default$10$$0$16777215$0$1$@@;@turnnr@0@0@0@0@0@0@0@0:All@0:All@0:All$@@;@name@0@0@0@0@0@0@0@0:All@0:All@0:All
-  Predefined5=Name; Tag$1234442$true$$Arial$0$Default$10$$0$16777215$0$1$@@;@name@0@0@0@0@0@0@0@0:All@0:All@0:All$@@;@turntag@0@0@0@0@0@0@0@0:All@0:All@0:All
-  Predefined6=Number; Tag$1234442$true$$Arial$0$Default$10$$0$16777215$0$1$@@;@turnnr@0@0@0@0@0@0@0@0:All@0:All@0:All$@@;@turntag@0@0@0@0@0@0@0@0:All@0:All@0:All
-  Predefined7=Number; Name; Tag$1234442$true$$Arial$0$Default$10$$0$16777215$0$1$@@;@turnnr@0@0@0@0@0@0@0@0:All@0:All@0:All$@@;@name@0@0@0@0@0@0@0@0:All@0:All@0:All$@@;@turntag@0@0@0@0@0@0@0@0:All@0:All@0:All
+  Predefined1=Number$1234442$1$$Arial;0;10;$0$16777215$0$1$-1.0$-1.0$1$@@@transitlinenr@@0@0@0@0@0@0@0:All@0:All@0:All$
+  Predefined1.Category=0
+  Predefined2=Name$1234442$1$$Arial;0;10;$0$16777215$0$1$-1.0$-1.0$1$@@@name@@0@0@0@0@0@0@0:All@0:All@0:All$
+  Predefined2.Category=0
+  Predefined3=Tag$1234442$1$$Arial;0;10;$0$16777215$0$1$-1.0$-1.0$1$@@@transittag@@0@0@0@0@0@0@0:All@0:All@0:All$
+  Predefined3.Category=0
+  Predefined4=Number; Name$1234442$1$$Arial;0;10;$0$16777215$0$1$-1.0$-1.0$2$@@;@transitlinenr@@0@0@0@0@0@0@0:All@0:All@0:All$@@;@name@@0@0@0@0@0@0@0:All@0:All@0:All$
+  Predefined4.Category=0
+  Predefined5=Name; Tag$1234442$1$$Arial;0;10;$0$16777215$0$1$-1.0$-1.0$2$@@;@name@@0@0@0@0@0@0@0:All@0:All@0:All$@@;@transittag@@0@0@0@0@0@0@0:All@0:All@0:All$
+  Predefined5.Category=0
+  Predefined6=Number; Tag$1234442$1$$Arial;0;10;$0$16777215$0$1$-1.0$-1.0$2$@@;@transitlinenr@@0@0@0@0@0@0@0:All@0:All@0:All$@@;@transittag@@0@0@0@0@0@0@0:All@0:All@0:All$
+  Predefined6.Category=0
+  Predefined7=Number; Name; Tag$1234442$1$$Arial;0;10;$0$16777215$0$1$-1.0$-1.0$3$@@;@transitlinenr@@0@0@0@0@0@0@0:All@0:All@0:All$@@;@name@@0@0@0@0@0@0@0:All@0:All@0:All$@@;@transittag@@0@0@0@0@0@0@0:All@0:All@0:All$
+  Predefined7.Category=0
+  Categories=0
+  Predefines=7
 
 [Predefined Labels for Zones]
-  PreDefines=7
-  Predefined1=Number$1234442$true$$Arial$0$Default$10$$0$16777215$0$1$@@@centroidnr@0@0@0@0@0@0@0@0:All@0:All@0:All
-  Predefined2=Name$1234442$true$$Arial$0$Default$10$$0$16777215$0$1$@@@name@0@0@0@0@0@0@0@0:All@0:All@0:All
-  Predefined3=Tag$1234442$true$$Arial$0$Default$10$$0$16777215$0$1$@@@centroidtag@0@0@0@0@0@0@0@0:All@0:All@0:All
-  Predefined4=Number; Name$1234442$true$$Arial$0$Default$10$$0$16777215$0$1$@@;@centroidnr@0@0@0@0@0@0@0@0:All@0:All@0:All$@@;@name@0@0@0@0@0@0@0@0:All@0:All@0:All
-  Predefined5=Name; Tag$1234442$true$$Arial$0$Default$10$$0$16777215$0$1$@@;@name@0@0@0@0@0@0@0@0:All@0:All@0:All$@@;@centroidtag@0@0@0@0@0@0@0@0:All@0:All@0:All
-  Predefined6=Number; Tag$1234442$true$$Arial$0$Default$10$$0$16777215$0$1$@@;@centroidnr@0@0@0@0@0@0@0@0:All@0:All@0:All$@@;@centroidtag@0@0@0@0@0@0@0@0:All@0:All@0:All
-  Predefined7=Number; Name; Tag$1234442$true$$Arial$0$Default$10$$0$16777215$0$1$@@;@centroidnr@0@0@0@0@0@0@0@0:All@0:All@0:All$@@;@name@0@0@0@0@0@0@0@0:All@0:All@0:All$@@;@centroidtag@0@0@0@0@0@0@0@0:All@0:All@0:All
+  Predefined1=Number$1234442$1$$Arial;0;10;$0$16777215$0$1$-1.0$-1.0$1$@@@centroidnr@@0@0@0@0@0@0@0:All@0:All@0:All$
+  Predefined1.Category=0
+  Predefined2=Name$1234442$1$$Arial;0;10;$0$16777215$0$1$-1.0$-1.0$1$@@@name@@0@0@0@0@0@0@0:All@0:All@0:All$
+  Predefined2.Category=0
+  Predefined3=Tag$1234442$1$$Arial;0;10;$0$16777215$0$1$-1.0$-1.0$1$@@@centroidtag@@0@0@0@0@0@0@0:All@0:All@0:All$
+  Predefined3.Category=0
+  Predefined4=Number; Name$1234442$1$$Arial;0;10;$0$16777215$0$1$-1.0$-1.0$2$@@;@centroidnr@@0@0@0@0@0@0@0:All@0:All@0:All$@@;@name@@0@0@0@0@0@0@0:All@0:All@0:All$
+  Predefined4.Category=0
+  Predefined5=Name; Tag$1234442$1$$Arial;0;10;$0$16777215$0$1$-1.0$-1.0$2$@@;@name@@0@0@0@0@0@0@0:All@0:All@0:All$@@;@centroidtag@@0@0@0@0@0@0@0:All@0:All@0:All$
+  Predefined5.Category=0
+  Predefined6=Number; Tag$1234442$1$$Arial;0;10;$0$16777215$0$1$-1.0$-1.0$2$@@;@centroidnr@@0@0@0@0@0@0@0:All@0:All@0:All$@@;@centroidtag@@0@0@0@0@0@0@0:All@0:All@0:All$
+  Predefined6.Category=0
+  Predefined7=Number; Name; Tag$1234442$1$$Arial;0;10;$0$16777215$0$1$-1.0$-1.0$3$@@;@centroidnr@@0@0@0@0@0@0@0:All@0:All@0:All$@@;@name@@0@0@0@0@0@0@0:All@0:All@0:All$@@;@centroidtag@@0@0@0@0@0@0@0:All@0:All@0:All$
+  Predefined7.Category=0
+  Categories=0
+  Predefines=7
 
 [Predefined Loads]
-  PreDefines=4
-  Predefined1=PT_regular$All Links$1$2$2$sum(load)$sum(load)$sum(LOAD)$sum(load)$sum(density)$sum(LOAD)$sum(LOAD)$sum(LOAD)$1$10,30,40$2,3$11,12,13$1$1$$$$$$$$0$0.267$0.533$0.8$1.067$1.333$1.6$1.867$2.133$2.4$2.667$2.933$3.2$3.467$3.733$4$65408$61183$57087$52991$48895$44799$40703$36607$32511$28415$24319$20223$16127$12031$7935$3839$0$0$1.0000$0$3$0$0$0$$$$$$$0$0$Load (veh/h)$Density (veh/km)$0$0$$0.00000$0$All Transit lines$2$sum(load)$$0$$$$2$sum(LOAD)$sum(LOAD)$$$$0$0$0$0$0$0$0$0$1$1$0$$0$AM$Midday$$$$$$$$$$$$$$$0$70$0$$$$$$$$$$$$$$$$$1$Band Widths$0$Arial;0;10;$1$0$
-  Predefined2=PT_regular_mode$All Links$2$1$2$sum(load)$mode$sum(LOAD)$sum(load)$sum(density)$sum(LOAD)$sum(LOAD)$sum(LOAD)$1$30,40$2,3$1$1$1$$$$$$$$0$0.267$0.533$0.8$1.067$1.333$1.6$1.867$2.133$2.4$2.667$2.933$3.2$3.467$3.733$4$65408$61183$57087$52991$48895$44799$40703$36607$32511$28415$24319$20223$16127$12031$7935$3839$0$0$1.0000$0$3$0$0$0$$$$$$$0$0$Load (veh/h)$Density (veh/km)$0$0$$0.00000$0$All Transit lines$2$sum(load)$$0$$$$2$sum(LOAD)$sum(LOAD)$$$$0$0$0$0$0$0$0$0$1$1$0$$0$AM$Midday$$$$$$$$$$$$$$$0$70$0$$$$$$$$$$$$$$$$$1$Band Widths$0$Arial;0;10;$1$0$
-  Predefined3=PT_schedule$All Links$3$1$2$sum(load)$mode$sum(LOAD)$sum(load)$sum(load)$sum(LOAD)$sum(LOAD)$sum(LOAD)$1$30,40$10050..10100$1$1$1$$$$$$$$0$0.267$0.533$0.8$1.067$1.333$1.6$1.867$2.133$2.4$2.667$2.933$3.2$3.467$3.733$4$65279$61183$57087$52991$48895$44799$40703$36607$32511$28415$24319$20223$16127$12031$7935$3839$0$0$1.0000$0$3$0$0$0$$$$$$$0$0$Load (veh/h)$Density (veh/km)$0$0$$0.00000$0$All Transit lines$2$sum(load)$$0$$$$2$sum(LOAD)$sum(LOAD)$$$$0$0$0$0$0$0$0$0$1$1$0$$0$30:PT$40:Walk$$$$$$$$$$$$$$$0$70$0$$$$$$$$$$$$$$$$$1$Band Widths$0$Arial;0;10;$1$0$
-  Predefined4=PT_oldschool$All Links$2$2$2$sum(load)$mode$sum(LOAD)$sum(load)$sum(density)$sum(LOAD)$sum(LOAD)$sum(LOAD)$1$30,40$10$1$1$1$$$$$$$$0$0.267$0.533$0.8$1.067$1.333$1.6$1.867$2.133$2.4$2.667$2.933$3.2$3.467$3.733$4$65408$61183$57087$52991$48895$44799$40703$36607$32511$28415$24319$20223$16127$12031$7935$3839$0$0$1.0000$0$3$0$0$0$$$$$$$0$0$Load (veh/h)$Density (veh/km)$0$0$$0.00000$0$All Transit lines$2$sum(load)$$0$$$$2$sum(LOAD)$sum(LOAD)$$$$0$0$0$0$0$0$0$0$1$1$0$$0$AM$Midday$$$$$$$$$$$$$$$0$70$0$$$$$$$$$$$$$$$$$1$Band Widths$0$Arial;0;10;$1$0$
+  Predefined1=PT_regular$All Links$1$2$2$sum(load)$sum(load)$sum(LOAD)$sum(load)$sum(density)$sum(LOAD)$sum(LOAD)$sum(LOAD)$1$10,30,40$2,3$11,12,13$1$1$$$$$$$$0$0.267$0.533$0.8$1.067$1.333$1.6$1.867$2.133$2.4$2.667$2.933$3.2$3.467$3.733$4$65408$61183$57087$52991$48895$44799$40703$36607$32511$28415$24319$20223$16127$12031$7935$3839$0$0$1.0000$0$3$0$0$0$$$$$$$0$0$Load (veh/h)$Density (veh/km)$0$0$$0.00000$0$All Transit lines$2$sum(load)$$0$$$$2$sum(LOAD)$sum(LOAD)$$$$0$0$0$0$0$0$0$0$1$1$0$$0$AM$Midday$$$$$$$$$$$$$$$0$70$0$$$$$$$$$$$$$$$$$1$Band Widths$0$Arial;0;10;$1$0
+  Predefined1.Category=0
+  Predefined2=PT_regular_mode$All Links$2$1$2$sum(load)$mode$sum(LOAD)$sum(load)$sum(density)$sum(LOAD)$sum(LOAD)$sum(LOAD)$1$30,40$2,3$1$1$1$$$$$$$$0$0.267$0.533$0.8$1.067$1.333$1.6$1.867$2.133$2.4$2.667$2.933$3.2$3.467$3.733$4$65408$61183$57087$52991$48895$44799$40703$36607$32511$28415$24319$20223$16127$12031$7935$3839$0$0$1.0000$0$3$0$0$0$$$$$$$0$0$Load (veh/h)$Density (veh/km)$0$0$$0.00000$0$All Transit lines$2$sum(load)$$0$$$$2$sum(LOAD)$sum(LOAD)$$$$0$0$0$0$0$0$0$0$1$1$0$$0$AM$Midday$$$$$$$$$$$$$$$0$70$0$$$$$$$$$$$$$$$$$1$Band Widths$0$Arial;0;10;$1$0
+  Predefined2.Category=0
+  Predefined3=PT_schedule$All Links$3$1$2$sum(load)$mode$sum(LOAD)$sum(load)$sum(load)$sum(LOAD)$sum(LOAD)$sum(LOAD)$1$30,40$10050..10100$1$1$1$$$$$$$$0$0.267$0.533$0.8$1.067$1.333$1.6$1.867$2.133$2.4$2.667$2.933$3.2$3.467$3.733$4$65279$61183$57087$52991$48895$44799$40703$36607$32511$28415$24319$20223$16127$12031$7935$3839$0$0$1.0000$0$3$0$0$0$$$$$$$0$0$Load (veh/h)$Density (veh/km)$0$0$$0.00000$0$All Transit lines$2$sum(load)$$0$$$$2$sum(LOAD)$sum(LOAD)$$$$0$0$0$0$0$0$0$0$1$1$0$$0$30:PT$40:Walk$$$$$$$$$$$$$$$0$70$0$$$$$$$$$$$$$$$$$1$Band Widths$0$Arial;0;10;$1$0
+  Predefined3.Category=0
+  Predefined4=PT_oldschool$All Links$2$2$2$sum(load)$mode$sum(LOAD)$sum(load)$sum(density)$sum(LOAD)$sum(LOAD)$sum(LOAD)$1$30,40$10$1$1$1$$$$$$$$0$0.267$0.533$0.8$1.067$1.333$1.6$1.867$2.133$2.4$2.667$2.933$3.2$3.467$3.733$4$65408$61183$57087$52991$48895$44799$40703$36607$32511$28415$24319$20223$16127$12031$7935$3839$0$0$1.0000$0$3$0$0$0$$$$$$$0$0$Load (veh/h)$Density (veh/km)$0$0$$0.00000$0$All Transit lines$2$sum(load)$$0$$$$2$sum(LOAD)$sum(LOAD)$$$$0$0$0$0$0$0$0$0$1$1$0$$0$AM$Midday$$$$$$$$$$$$$$$0$70$0$$$$$$$$$$$$$$$$$1$Band Widths$0$Arial;0;10;$1$0
+  Predefined4.Category=0
+  Categories=0
+  Predefines=4
 
-[Predefine Types]
-  Types=Bars$Flows$Labels for Areas$Labels for Controls$Labels for Counts$Labels for Links$Labels for Nodes$Labels for Routes$Labels for Screenlines$Labels for Stops$Labels for Transit$Labels for Turns$Labels for Zones$Loads$Object Colors$Pies$Queries$Reports
+[Predefined Object Colors]
+  Categories=0
+
+[Predefined Pies]
+  Categories=0
+
+[Predefined Queries]
+  Categories=0
+
+[Predefined Reports]
+  Categories=0
+
+[Predefined Views]
+  Categories=0
 
 [Defaults]
   AutoScale=0
   Scale=0.0010000000
-  DistanceFormula=0
-  Projection=1
-  Spheroid=0
-  UTMZone=1
-  NameODN=1
+  Units=1
+  DistanceFormula=4
+  CoordinateSystem=Cartesian
+  MapProjection=None
+  CoordinateSystemEx=
+  MapProjectionEx=
   DataSerie=3
   SelectionObject=111
   BaseColors(0)=16383999,65535,65280,16776960,16711680,255,4194432,0,14125450,
@@ -171,10 +248,17 @@
   PathFindingDepth=10
   EditJunctions=0
   JobPriority=4
-  Zenith=1
   Crypted=0
   ForceLevel2Index=0
+  ShowSelectionShape=1
+  SelectionShapeColor=0
+  SelectionShapeWidth=1
   AutoLogging=0
+  ControlsVisible=0
+  RoutesVisible=0
+  DefaultViewName=
+  HoverCoordinates=0
+  DegreesInMinSec=0
   MessageLevel=1
   CollectionActivated=0
   AuditCollectJobs=1
@@ -213,10 +297,13 @@
 [Country]
   DriveLeft=0
 
+[Format]
+  Matrix=omnitrans
+
 [Legend]
   Show=0
   Alignment=4
-  Height=288
+  Height=870
   Width=104
   Font.Name=Arial
   Font.Color=0
@@ -267,7 +354,4 @@
   JobButton1=Tests\Transfer\tc_inveh_skims
 
 [Maps]
-  PosX=0.000000000000000
-  PosY=0.000000000000000
-  MaxX=200.0000000000000
   NMaps=0
