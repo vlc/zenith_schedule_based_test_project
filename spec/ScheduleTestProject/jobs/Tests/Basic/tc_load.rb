@@ -20,7 +20,7 @@ class TC_load < OtTestCase
     #super
   end
 
-  def t est_simple
+  def test_simple
     assert_nothing_raised(RuntimeError) {
 
       # schedule based properties
@@ -92,7 +92,7 @@ class TC_load < OtTestCase
 
   end
 
-  def t est_aggregateLoads
+  def test_aggregateLoads
     assert_nothing_raised(RuntimeError) {
 
       # schedule based properties
@@ -143,7 +143,7 @@ class TC_load < OtTestCase
 
   end
 
-  def t est_aggregateAndAnimate
+  def test_aggregateAndAnimate
     assert_nothing_raised(RuntimeError) {
       @tr.scheduleStartTime = @timePeriods.first
       @tr.scheduleDurations = [5]
@@ -156,7 +156,7 @@ class TC_load < OtTestCase
 		}
 	end
 
-  def t est_multiple_od_matrices
+  def test_multiple_od_matrices
     assert_nothing_raised(RuntimeError) {
 
       # schedule based properties
@@ -182,7 +182,7 @@ class TC_load < OtTestCase
     }
   end
 
-  def t est_multiple_classes
+  def test_multiple_classes
     assert_nothing_raised(RuntimeError) {
 
       # create matrices
@@ -222,7 +222,7 @@ class TC_load < OtTestCase
 
   end
 
-  def t est_duration_missing
+  def test_duration_missing
     assert_raises(RuntimeError) {
       # schedule based properties
       @tr.scheduleStartTime = @timePeriods.first
