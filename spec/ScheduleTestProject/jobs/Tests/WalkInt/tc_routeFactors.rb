@@ -3,7 +3,6 @@ require 'utils/spec/ot_test_suite'
 class TC_routeFactors < OtTestCase
 
   def setup
-    @db = TestAssistant.new
     @tr = OtTransit.new
     @timePeriods = [10050]
     @timePeriods.each { |t| create_matrix([1,30,t,1,1,1], [[1,2,10]]) }

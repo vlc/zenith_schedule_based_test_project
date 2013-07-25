@@ -71,14 +71,15 @@ class TC_load < OtTestCase
       @tr.execute
 
       # Note that the walk legs are 7 minutes long because they take 6 min in total so will be from [s, s+6] which spans 7 actual minute slices
-      (0..6).each  { |off| assert_equal(10, @db.get_value('link5_2data1', [1,1,'Walk',10050+off,1,1,1,1,0], "load"), "walk access") } # 7 min
-      (0..4).each  { |off| assert_equal(10, @db.get_value('link5_2data1', [2,1,'PT',  10060+off,1,1,1,1,1], "load"), "walk access") } # 5 min
+      (0..6).each  { |off| assert_equal(10, @db.get_value('link5_2data1', [1,1,'Walk',10050+off,1,1,1,1,0], "load"), "walk access    [7 min]") }
+      (0..4).each  { |off| assert_equal(10, @db.get_value('link5_2data1', [2,1,'PT',  10060+off,1,1,1,1,1], "load"), "PT stop 1 -> 2 [5 min]") }
       # 1 min dwell time
-      (0..3).each  { |off| assert_equal(10, @db.get_value('link5_2data1', [6,1,'PT',  10066+off,1,1,1,1,1], "load"), "walk access") } # 4 min
-      (0..4).each  { |off| assert_equal(10, @db.get_value('link5_2data1', [7,1,'PT',  10070+off,1,1,1,2,1], "load"), "walk access") } # 5 min
+      (0..3).each  { |off| assert_equal(10, @db.get_value('link5_2data1', [6,1,'PT',  10066+off,1,1,1,1,1], "load"), "PT stop 2 -> 3 (link 6) [4 min]") }
+      # BUG: There is another minute spent on the preceeding PT leg 66->70 (expected 66->69)
+      (0..4).each  { |off| assert_equal(10, @db.get_value('link5_2data1', [7,1,'PT',  10070+off,1,1,1,2,1], "load"), "PT stop 2 -> 3 (link 7) [5 min]") }
       # 1 min dwell time
-      (0..13).each { |off| assert_equal(10, @db.get_value('link5_2data1', [4,1,'PT',  10076+off,1,1,1,1,1], "load"), "walk access") } # 14 min
-      (0..6).each  { |off| assert_equal(10, @db.get_value('link5_2data1', [5,1,'Walk',10090+off,1,1,1,2,0], "load"), "walk egress") } # 7 min
+      (0..13).each { |off| assert_equal(10, @db.get_value('link5_2data1', [4,1,'PT',  10076+off,1,1,1,1,1], "load"), "PT stop 3 -> 4 [14 min]") }
+      (0..6).each  { |off| assert_equal(10, @db.get_value('link5_2data1', [5,1,'Walk',10090+off,1,1,1,2,0], "load"), "walk egress    [ 7 min]")     }
 
       assert_equal(42*10, OtQuery.execute_to_a("SELECT sum(load) FROM link5_2data1").flatten.first, "total load")
 
