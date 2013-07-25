@@ -15,8 +15,7 @@ class TC_aet_skim < OtTestCase
   end
 
   def teardown
-    @tr = nil
-    #super
+    super
   end
 
   def test_basic_cost

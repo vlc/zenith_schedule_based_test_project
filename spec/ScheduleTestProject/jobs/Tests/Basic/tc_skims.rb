@@ -17,7 +17,6 @@ class TC_skim < OtTestCase
   end
 
   def teardown
-    @tr = nil
     reset_fare_systems()
     super
   end

@@ -15,7 +15,6 @@ class TC_penalty < OtTestCase
   end
 
   def teardown
-    @tr = nil
     super
   end
 

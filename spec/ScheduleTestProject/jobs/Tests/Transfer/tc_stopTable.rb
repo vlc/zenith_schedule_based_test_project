@@ -15,8 +15,7 @@ class TC_stopTable < OtTestCase
   end
 
   def teardown
-    @tr = nil
-    #super
+    super
   end
 
   def test_simple

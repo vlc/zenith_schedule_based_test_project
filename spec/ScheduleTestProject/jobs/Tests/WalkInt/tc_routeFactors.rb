@@ -14,7 +14,6 @@ class TC_routeFactors < OtTestCase
   end
 
   def teardown
-    @tr = nil
     super
   end
 

@@ -16,7 +16,6 @@ class TC_stop_specific_penalty < OtTestCase
 
   def teardown
     reset_stop_access_penalties()
-    @tr = nil
     super
   end
 

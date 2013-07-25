@@ -15,7 +15,6 @@ class TC_skim < OtTestCase
   end
 
   def teardown
-    @tr = nil
     super
   end
 

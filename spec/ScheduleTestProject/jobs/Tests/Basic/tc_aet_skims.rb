@@ -16,7 +16,6 @@ class TC_aet_skim < OtTestCase
 
   def teardown
     reset_fare_systems()
-    @tr = nil
     super
   end
 

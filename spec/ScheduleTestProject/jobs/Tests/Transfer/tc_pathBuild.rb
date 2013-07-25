@@ -15,8 +15,7 @@ class TC_pathBuild < OtTestCase
   end
 
   def teardown
-    @tr = nil
-    # super
+    super
   end
 
   def test_path_factors

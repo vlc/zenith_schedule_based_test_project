@@ -19,7 +19,6 @@ class TC_modes < OtTestCase
   end
 
   def teardown
-    @tr = nil
     super
   end
 

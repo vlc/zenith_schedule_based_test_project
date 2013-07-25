@@ -15,7 +15,6 @@ class TC_minProbability < OtTestCase
   end
 
   def teardown
-    @tr = nil
     super
   end
 

@@ -17,7 +17,6 @@ class TC_stop5_4data1_table < OtTestCase
   end
 
   def teardown
-    @tr = nil
     delete_stop5_4data1_table
     super
   end

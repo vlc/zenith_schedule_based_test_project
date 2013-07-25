@@ -11,7 +11,6 @@ class TC_loading_profile < OtTestCase
   end
 
   def teardown
-    @tr = nil
     super
   end
 

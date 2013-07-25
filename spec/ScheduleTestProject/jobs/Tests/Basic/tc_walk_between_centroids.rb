@@ -19,8 +19,7 @@ class TC_walk_between_centroid < OtTestCase
 
   def teardown
     reset_fare_systems()
-    @tr = nil
-    # super
+    super
   end
 
   def test_basic
