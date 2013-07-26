@@ -108,7 +108,7 @@
   MaxFormpointNr=0
   NrOfSegments=0
   MaxSegmentNr=0
-  LoadDimensions(0)=1,1,1,1,1,0,
+  LoadDimensions(0)=1,40,10086,1,1,1,
   NrOfCentroids=2
   MaxCentroidNr=2
   NrOfNodes=5

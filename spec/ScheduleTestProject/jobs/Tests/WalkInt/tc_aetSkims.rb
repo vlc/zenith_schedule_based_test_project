@@ -19,44 +19,42 @@ class TC_aet_skim < OtTestCase
   end
 
   def test_basic_cost
-    assert_nothing_raised(RuntimeError) {
-      skim_results = [11,12,13,14,15]
+    skim_results = [11,12,13,14,15]
 
-      # schedule based properties
-      @tr.scheduleStartTime = @timePeriods.first
-      @tr.scheduleDurations = [5]
-      @tr.skimMatrix = [1,1,1,1,1,1]
-      @tr.accessSkimMatrix   = [2,1,1,1,skim_results,1]
-      @tr.egressSkimMatrix   = [3,1,1,1,skim_results,1]
-      @tr.transferSkimMatrix = [4,1,1,1,skim_results,1]
-      @tr.defaultIntraZonalSkimValue = 99999.0
-      @tr.execute
+    # schedule based properties
+    @tr.scheduleStartTime = @timePeriods.first
+    @tr.scheduleDurations = [5]
+    @tr.skimMatrix = [1,1,1,1,1,1]
+    @tr.accessSkimMatrix   = [2,1,1,1,skim_results,1]
+    @tr.egressSkimMatrix   = [3,1,1,1,skim_results,1]
+    @tr.transferSkimMatrix = [4,1,1,1,skim_results,1]
+    @tr.defaultIntraZonalSkimValue = 99999.0
+    @tr.execute
 
-      # cost, distance, time, wait, penalty
-      access_skim_values = [6, 1, 6, 4, 0]
-      transfer_skim_values = [3, 0.5, 3, 2, 5]
-      egress_skim_values = [3, 0.5, 3, 0, 0]
+    # cost, distance, time, wait, penalty
+    access_skim_values = [6, 1, 6, 4, 0]
+    transfer_skim_values = [3, 0.5, 3, 2, 5]
+    egress_skim_values = [3, 0.5, 3, 0, 0]
 
-      access_skim_values.zip(skim_results).each { |value, result|
-        #~ assert_in_delta(value, @db.get_skim_value(pmturi, 1, 2), TEST_DELTA, "Transfers skim")
-        pmturi = [2,1,@timePeriods.first,1,result,1]
-        {[1,1]=>99999.0, [1,2]=>value, [2,2]=>99999.0}.each { |(i,j),expected_value|
-          assert_in_delta(expected_value, @db.get_skim_value(pmturi, i, j), TEST_DELTA, "Transfers skim")
-        }
+    access_skim_values.zip(skim_results).each { |value, result|
+      #~ assert_in_delta(value, @db.get_skim_value(pmturi, 1, 2), TEST_DELTA, "Transfers skim")
+      pmturi = [2,1,@timePeriods.first,1,result,1]
+      {[1,1]=>99999.0, [1,2]=>value, [2,2]=>99999.0}.each { |(i,j),expected_value|
+        assert_in_delta(expected_value, @db.get_skim_value(pmturi, i, j), TEST_DELTA, "Transfers skim")
       }
+    }
 
-      egress_skim_values.zip(skim_results).each { |value, result|
-        pmturi = [3,1,@timePeriods.first,1,result,1]
-        {[1,1]=>99999.0, [1,2]=>value, [2,2]=>99999.0}.each { |(i,j),expected_value|
-          assert_in_delta(expected_value, @db.get_skim_value(pmturi, i, j), TEST_DELTA, "Transfers skim")
-        }
+    egress_skim_values.zip(skim_results).each { |value, result|
+      pmturi = [3,1,@timePeriods.first,1,result,1]
+      {[1,1]=>99999.0, [1,2]=>value, [2,2]=>99999.0}.each { |(i,j),expected_value|
+        assert_in_delta(expected_value, @db.get_skim_value(pmturi, i, j), TEST_DELTA, "Transfers skim")
       }
+    }
 
-      transfer_skim_values.zip(skim_results).each { |value, result|
-        pmturi = [4,1,@timePeriods.first,1,result,1]
-        {[1,1]=>99999.0, [1,2]=>value, [2,2]=>99999.0}.each { |(i,j),expected_value|
-          assert_in_delta(expected_value, @db.get_skim_value(pmturi, i, j), TEST_DELTA, "Transfers skim")
-        }
+    transfer_skim_values.zip(skim_results).each { |value, result|
+      pmturi = [4,1,@timePeriods.first,1,result,1]
+      {[1,1]=>99999.0, [1,2]=>value, [2,2]=>99999.0}.each { |(i,j),expected_value|
+        assert_in_delta(expected_value, @db.get_skim_value(pmturi, i, j), TEST_DELTA, "Transfers skim")
       }
     }
   end

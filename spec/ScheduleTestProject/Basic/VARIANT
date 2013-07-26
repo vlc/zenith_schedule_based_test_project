@@ -139,7 +139,7 @@
 [Areas]
   ZoomLevelLow=-1.0000000
   ZoomLevelHigh=-1.0000000
-  LabelPrecision=-1
+  LabelPrecision=1
   ShowLabel=0
   LabelDesign=$1$1$$Arial;0;10;$0$16777215$0$1$-1.0$-1.0$1$@@@name@@0@0@0@0@0@0@0:All@0:All@0:All$
   Show=0
@@ -191,7 +191,7 @@
 [Controls]
   ZoomLevelLow=-1.0000000
   ZoomLevelHigh=-1.0000000
-  LabelPrecision=-1
+  LabelPrecision=1
   ShowLabel=0
   LabelDesign=$1$1$$Arial;0;10;$0$16777215$0$1$-1.0$-1.0$1$@@@name@@0@0@0@0@0@0@0:All@0:All@0:All$
   Show=1
@@ -208,7 +208,7 @@
 [Counts]
   ZoomLevelLow=-1.0000000
   ZoomLevelHigh=-1.0000000
-  LabelPrecision=-1
+  LabelPrecision=1
   ShowLabel=0
   LabelDesign=$1$1$$Arial;0;10;$0$16777215$0$1$-1.0$-1.0$1$@@@name@@0@0@0@0@0@0@0:All@0:All@0:All$
   Show=0
@@ -228,7 +228,7 @@
   ShowLabel=0
   LabelDesign=$1$1$$Arial;0;10;$0$16777215$0$1$-1.0$-1.0$0$
   AsDesign=0
-  Name=
+  Name=<none>
   Show=0
   Style=1
   Stacked=1
@@ -352,7 +352,7 @@
 [Links]
   ZoomLevelLow=-1.0000000
   ZoomLevelHigh=-1.0000000
-  LabelPrecision=-1
+  LabelPrecision=1
   ShowLabel=1
   LabelDesign=Number$1234433$1$$Arial;0;10;$0$16777215$0$1$-1.0$-1.0$1$@@@linknr@@0@0@0@0@0@0@0:All@0:All@0:All$
   Show=1
@@ -390,9 +390,9 @@
   ZoomLevelHigh=-1.0000000
   LabelPrecision=-1
   ShowLabel=0
-  LabelDesign=$1$1$$Arial;0;10;$0$16777215$0$1$-1.0$-1.0$0$
+  LabelDesign=$1$1$<All links>$Arial;0;10;$0$16777215$0$1$-1.0$-1.0$0$
   AsDesign=0
-  Show=0
+  Show=1
   Fixed=0
   LoadName=PT_schedule
   LoadValue=0
@@ -523,7 +523,7 @@
 [Nodes]
   ZoomLevelLow=-1.0000000
   ZoomLevelHigh=-1.0000000
-  LabelPrecision=-1
+  LabelPrecision=1
   ShowLabel=0
   LabelDesign=$1$1$$Arial;0;10;$0$16777215$0$1$-1.0$-1.0$1$@@@name@@0@0@0@0@0@0@0:All@0:All@0:All$
   Show=1
@@ -549,7 +549,7 @@
   ShowLabel=0
   LabelDesign=$1$1$$Arial;0;10;$0$16777215$0$1$-1.0$-1.0$0$
   AsDesign=0
-  Name=employment
+  Name=<none>
   Scope=All
   Expression=employment
   Show=0
@@ -711,7 +711,7 @@
 [Routes]
   ZoomLevelLow=-1.0000000
   ZoomLevelHigh=-1.0000000
-  LabelPrecision=-1
+  LabelPrecision=1
   ShowLabel=0
   LabelDesign=$1$1$$Arial;0;10;$0$16777215$0$1$-1.0$-1.0$1$@@@name@@0@0@0@0@0@0@0:All@0:All@0:All$
   Show=0
@@ -723,12 +723,12 @@
   Spacing=0.0000000
   Arrow=5
   FixedSize=0
-  Filter=
+  Filter=All
 
 [Screenlines]
   ZoomLevelLow=-1.0000000
   ZoomLevelHigh=-1.0000000
-  LabelPrecision=-1
+  LabelPrecision=1
   ShowLabel=0
   LabelDesign=$22522881$0$$Arial;0;10;$0$16777215$0$0$-1.0$-1.0$0$
   Show=0
@@ -744,7 +744,7 @@
 [Stops]
   ZoomLevelLow=-1.0000000
   ZoomLevelHigh=-1.0000000
-  LabelPrecision=-1
+  LabelPrecision=1
   ShowLabel=1
   LabelDesign=Number$10$1$$Arial;0;10;$0$16777215$0$1$-1.0$-1.0$1$@@@stopnr@@0@0@0@0@0@0@0:All@0:All@0:All$
   Show=1
@@ -759,7 +759,7 @@
 [Transit]
   ZoomLevelLow=-1.0000000
   ZoomLevelHigh=-1.0000000
-  LabelPrecision=-1
+  LabelPrecision=1
   ShowLabel=0
   LabelDesign=$1$1$$Arial;0;10;$0$16777215$0$1$-1.0$-1.0$1$@@@name@@0@0@0@0@0@0@0:All@0:All@0:All$
   Show=1
@@ -777,7 +777,7 @@
 [Turns]
   ZoomLevelLow=-1.0000000
   ZoomLevelHigh=-1.0000000
-  LabelPrecision=-1
+  LabelPrecision=1
   ShowLabel=0
   LabelDesign=$1$1$$Arial;0;10;$0$16777215$0$1$-1.0$-1.0$1$@@@name@@0@0@0@0@0@0@0:All@0:All@0:All$
   Show=0
@@ -795,7 +795,7 @@
 [Zones]
   ZoomLevelLow=-1.0000000
   ZoomLevelHigh=-1.0000000
-  LabelPrecision=-1
+  LabelPrecision=1
   ShowLabel=0
   LabelDesign=$22522890$0$$Arial;0;10;$0$16777215$0$0$-1.0$-1.0$1$@@@name@@0@0@0@0@0@0@0:All@0:All@0:All$
   Show=1
