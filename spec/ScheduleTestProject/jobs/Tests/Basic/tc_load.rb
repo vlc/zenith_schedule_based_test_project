@@ -31,7 +31,7 @@ class TC_load < OtTestCase
     assert_equal(10, @db.get_value('link5_2data1', [1,1,'Walk',10050,1,1,1,1,0], "load"), "walk access")
     assert_equal(10, @db.get_value('link5_2data1', [2,1,'PT',10060,1,1,1,1,1], "load"), "walk access")
     assert_equal(10, @db.get_value('link5_2data1', [6,1,'PT',10066,1,1,1,1,1], "load"), "walk access")
-    assert_equal(10, @db.get_value('link5_2data1', [7,1,'PT',10070,1,1,1,2,1], "load"), "walk access")
+    assert_equal(10, @db.get_value('link5_2data1', [7,1,'PT',10071,1,1,1,2,1], "load"), "walk access")
     assert_equal(10, @db.get_value('link5_2data1', [4,1,'PT',10076,1,1,1,1,1], "load"), "walk access")
     assert_equal(10, @db.get_value('link5_2data1', [5,1,'Walk',10090,1,1,1,2,0], "load"), "walk egress")
 
@@ -43,7 +43,7 @@ class TC_load < OtTestCase
     assert_in_delta(6, 				@db.get_value('link5_2data1', [1,1,'Walk',10050,1,1,1,1,0], 'cost'), TEST_DELTA, "walk access cost")
     assert_in_delta(30.0 / 4, @db.get_value('link5_2data1', [2,1,'PT',10060,1,1,1,1,1],   'cost'), TEST_DELTA, "pt leg cost")
     assert_in_delta(30.0 / 4, @db.get_value('link5_2data1', [6,1,'PT',10066,1,1,1,1,1],   'cost'), TEST_DELTA, "pt leg cost")
-    assert_in_delta(30.0 / 4, @db.get_value('link5_2data1', [7,1,'PT',10070,1,1,1,2,1],   'cost'), TEST_DELTA, "pt leg cost")
+    assert_in_delta(30.0 / 4, @db.get_value('link5_2data1', [7,1,'PT',10071,1,1,1,2,1],   'cost'), TEST_DELTA, "pt leg cost")
     assert_in_delta(30.0 / 4, @db.get_value('link5_2data1', [4,1,'PT',10076,1,1,1,1,1],   'cost'), TEST_DELTA, "pt leg cost")
     assert_in_delta(6, 				@db.get_value('link5_2data1', [5,1,'Walk',10090,1,1,1,2,0], 'cost'), TEST_DELTA, "walk egress cost")
 
@@ -83,49 +83,47 @@ class TC_load < OtTestCase
   end
 
   def test_aggregateLoads
-    assert_nothing_raised(RuntimeError) {
 
-      # schedule based properties
-      @tr.scheduleStartTime = @timePeriods.first
-      @tr.scheduleDurations = [5]
-      # @tr.scheduleAnimateLoads = true
-      @tr.logitParameters  = [0.1]
-      @tr.scheduleAggregateTimePeriods = { 10000..10069 => 2, 10070..10090 => 3 }.to_a
-      @tr.execute
+    # schedule based properties
+    @tr.scheduleStartTime = @timePeriods.first
+    @tr.scheduleDurations = [5]
+    # @tr.scheduleAnimateLoads = true
+    @tr.logitParameters  = [0.1]
+    @tr.scheduleAggregateTimePeriods = { 10000..10070 => 2, 10071..10090 => 3 }.to_a
+    @tr.execute
 
-      #                                                           v
-      assert_equal(10, @db.get_value('link5_2data1', [1,1,'Walk', 2,1,1,1,1,0], "load"), "walk access")
-      assert_equal(10, @db.get_value('link5_2data1', [2,1,'PT',   2,1,1,1,1,1], "load"), "walk access")
+    #                                                           v
+    assert_equal(10, @db.get_value('link5_2data1', [1,1,'Walk', 2,1,1,1,1,0], "load"), "walk access")
+    assert_equal(10, @db.get_value('link5_2data1', [2,1,'PT',   2,1,1,1,1,1], "load"), "walk access")
 
-      assert_equal(10, @db.get_value('link5_2data1', [6,1,'PT',   2,1,1,1,1,1], "load"), "walk access")
-      assert_equal(10, @db.get_value('link5_2data1', [7,1,'PT',   3,1,1,1,2,1], "load"), "walk access")
+    assert_equal(10, @db.get_value('link5_2data1', [6,1,'PT',   2,1,1,1,1,1], "load"), "walk access")
+    assert_equal(10, @db.get_value('link5_2data1', [7,1,'PT',   3,1,1,1,2,1], "load"), "walk access")
 
-      assert_equal(10, @db.get_value('link5_2data1', [4,1,'PT',   3,1,1,1,1,1], "load"), "walk access")
-      assert_equal(10, @db.get_value('link5_2data1', [5,1,'Walk', 3,1,1,1,2,0], "load"), "walk egress")
+    assert_equal(10, @db.get_value('link5_2data1', [4,1,'PT',   3,1,1,1,1,1], "load"), "walk access")
+    assert_equal(10, @db.get_value('link5_2data1', [5,1,'Walk', 3,1,1,1,2,0], "load"), "walk egress")
 
-      # if we change the aggregation to include 10070 in time period 2, the start of link 7 will move to time period 2 from 3
-      @tr.scheduleAggregateTimePeriods = { 10000..10070 => 2, 10071..10090 => 3 }.to_a
-      @tr.execute
-      assert_equal(10, @db.get_value('link5_2data1', [7,1,'PT',   2,1,1,1,2,1], "load"), "walk access")
+    # if we change the aggregation to include 10070 in time period 2, the start of link 7 will move to time period 2 from 3
+    @tr.scheduleAggregateTimePeriods = { 10000..10071 => 2, 10072..10090 => 3 }.to_a
+    @tr.execute
+    assert_equal(10, @db.get_value('link5_2data1', [7,1,'PT',   2,1,1,1,2,1], "load"), "walk access")
 
-      # transit line table
-      assert_equal(10, @db.get_value('transitline5data1', [1,1,'PT',2,1,1,1], "passengers"),   "passengers")
-      assert_equal(40, @db.get_value('transitline5data1', [1,1,'PT',2,1,1,1], "passdistance"), "passenger distance") #  4 km * 10 passengers
-      assert_equal(5 , @db.get_value('transitline5data1', [1,1,'PT',2,1,1,1], "passtime"),     "passenger time") # half hour * 10 passengers
+    # transit line table
+    assert_equal(10, @db.get_value('transitline5data1', [1,1,'PT',2,1,1,1], "passengers"),   "passengers")
+    assert_equal(40, @db.get_value('transitline5data1', [1,1,'PT',2,1,1,1], "passdistance"), "passenger distance") #  4 km * 10 passengers
+    assert_equal(5 , @db.get_value('transitline5data1', [1,1,'PT',2,1,1,1], "passtime"),     "passenger time") # half hour * 10 passengers
 
-      # if we change the aggregation such that the first half of transit line isn't aggregated, then:
-      # -> there should be no link load on links starting outside the period of interest AND
-      # -> transit line table should use the time period of the last link instead
-      @tr.scheduleAggregateTimePeriods = { 10071..10090 => 3 }.to_a
-      @tr.execute
+    # if we change the aggregation such that the first half of transit line isn't aggregated, then:
+    # -> there should be no link load on links starting outside the period of interest AND
+    # -> transit line table should use the time period of the last link instead
+    @tr.scheduleAggregateTimePeriods = { 10071..10090 => 3 }.to_a
+    @tr.execute
 
-      assert_raises(RuntimeError) { @db.get_value('link5_2data1', [1,1,'Walk',10050,1,1,1,1,0], "load") }
+    assert_raises(RuntimeError) { @db.get_value('link5_2data1', [1,1,'Walk',10050,1,1,1,1,0], "load") }
 
-      #                                                             v
-      assert_equal(10, @db.get_value('transitline5data1', [1,1,'PT',3,1,1,1], "passengers"),   "passengers")
-      assert_equal(40, @db.get_value('transitline5data1', [1,1,'PT',3,1,1,1], "passdistance"), "passenger distance") #  4 km * 10 passengers
-      assert_equal(5 , @db.get_value('transitline5data1', [1,1,'PT',3,1,1,1], "passtime"),     "passenger time") # half hour * 10 passengers
-    }
+    #                                                             v
+    assert_equal(10, @db.get_value('transitline5data1', [1,1,'PT',3,1,1,1], "passengers"),   "passengers")
+    assert_equal(40, @db.get_value('transitline5data1', [1,1,'PT',3,1,1,1], "passdistance"), "passenger distance") #  4 km * 10 passengers
+    assert_equal(5 , @db.get_value('transitline5data1', [1,1,'PT',3,1,1,1], "passtime"),     "passenger time") # half hour * 10 passengers
 
   end
 
