@@ -34,7 +34,7 @@ class TC_loading_profile < OtTestCase
       assert_equal(10, @db.get_value('link5_2data1', [1,1,'Walk',10050,1,1,1,1,0], "load"), "walk access")
       assert_equal(10, @db.get_value('link5_2data1', [2,1,'PT',10060,1,1,1,1,1], "load"), "walk access")
       assert_equal(10, @db.get_value('link5_2data1', [6,1,'PT',10066,1,1,1,1,1], "load"), "walk access")
-      assert_equal(10, @db.get_value('link5_2data1', [7,1,'PT',10070,1,1,1,2,1], "load"), "walk access")
+      assert_equal(10, @db.get_value('link5_2data1', [7,1,'PT',10071,1,1,1,2,1], "load"), "walk access")
       assert_equal(10, @db.get_value('link5_2data1', [4,1,'PT',10076,1,1,1,1,1], "load"), "walk access")
       assert_equal(10, @db.get_value('link5_2data1', [5,1,'Walk',10090,1,1,1,2,0], "load"), "walk egress")
 
@@ -68,7 +68,7 @@ class TC_loading_profile < OtTestCase
 		  assert_in_delta(10/3.0, @db.get_value('link5_2data1', [1,1,'Walk',10050,1,1,1,1,0], "load"), TEST_DELTA, "walk access")
       assert_in_delta(10/3.0, @db.get_value('link5_2data1', [2,1,'PT',  10060,1,1,1,1,1], "load"), TEST_DELTA, "walk access")
       assert_in_delta(10/3.0, @db.get_value('link5_2data1', [6,1,'PT',  10066,1,1,1,1,1], "load"), TEST_DELTA, "walk access")
-      assert_in_delta(10/3.0, @db.get_value('link5_2data1', [7,1,'PT',  10070,1,1,1,2,1], "load"), TEST_DELTA, "walk access")
+      assert_in_delta(10/3.0, @db.get_value('link5_2data1', [7,1,'PT',  10071,1,1,1,2,1], "load"), TEST_DELTA, "walk access")
       assert_in_delta(10/3.0, @db.get_value('link5_2data1', [4,1,'PT',  10076,1,1,1,1,1], "load"), TEST_DELTA, "walk access")
       assert_in_delta(10/3.0, @db.get_value('link5_2data1', [5,1,'Walk',10090,1,1,1,2,0], "load"), TEST_DELTA, "walk egress")
 
