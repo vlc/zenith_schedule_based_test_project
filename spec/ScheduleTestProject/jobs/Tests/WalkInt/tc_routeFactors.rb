@@ -1,13 +1,10 @@
 require 'utils/spec/ot_test_suite'
+require $Ot.jobDirectory / 'ot_schedule_test_case'
 
-class TC_routeFactors < OtTestCase
+class TC_routeFactors < OtScheduleTestCase
 
   def setup
-    @tr = OtTransit.new
-    @timePeriods = [10050]
-    @timePeriods.each { |t| create_matrix([1,30,t,1,1,1], [[1,2,10]]) }
-    @tr.loadMatricesFromSkimCube = true
-    @tr.odMatrix = [1,30,@timePeriods,1,1,1]
+    super
     @tr.load = [1,30,10,1,1,1]
     @tr.network = [30,10]
     @tr.scheduleBased = true
@@ -22,7 +19,7 @@ class TC_routeFactors < OtTestCase
     @tr.scheduleStartTime = @timePeriods.first
     @tr.scheduleDurations = [5]
     # @tr.animateScheduleLoads = true
-    @tr.scheduleAggregateTimePeriods = { 10000..10100 => 2 }.to_a
+    @tr.scheduleAggregateTimePeriods = @all_time_to_single_period_aggregation # { 10000..10100 => 2 }.to_a
 
     @tr.logitParameters  = 0.1
 

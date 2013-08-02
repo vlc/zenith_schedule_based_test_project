@@ -1,14 +1,10 @@
 require 'utils/spec/ot_test_suite'
+require $Ot.jobDirectory / 'ot_schedule_test_case'
 
-class TC_walk_between_centroid < OtTestCase
+class TC_walk_between_centroid < OtScheduleTestCase
 
   def setup
-    clearOutputTables
-    @tr = OtTransit.new
-    @timePeriods = [10050]
-    @timePeriods.each { |t| create_matrix([1,30,t,1,1,1], [[1,2,10]]) }
-    @tr.loadMatricesFromSkimCube = true
-    @tr.odMatrix = [1,30,@timePeriods,1,1,1]
+    super
     @tr.load = [1,30,10,1,1,1]
     @tr.network = [30,10]
     @tr.scheduleBased = true
@@ -30,14 +26,14 @@ class TC_walk_between_centroid < OtTestCase
       # schedule based properties
       @tr.execute
 
-      assert_equal(10, @db.get_value('link5_2data1', [1,1,'Walk',10050,1,1,1,1,0], "load"), "walk")
-      assert_equal(10, @db.get_value('link5_2data1', [2,1,'Walk',10056,1,1,1,1,0], "load"), "walk")
-      assert_equal(10, @db.get_value('link5_2data1', [6,1,'Walk',10057,1,1,1,1,0], "load"), "walk")
-      assert_equal(10, @db.get_value('link5_2data1', [7,1,'Walk',10058,1,1,1,2,0], "load"), "walk")
-      assert_equal(10, @db.get_value('link5_2data1', [4,1,'Walk',10059,1,1,1,1,0], "load"), "walk")
-      assert_equal(10, @db.get_value('link5_2data1', [5,1,'Walk',10060,1,1,1,2,0], "load"), "walk")
+      assert_equal(10, @db.get_value('link5_2data1', [1,1,'Walk',t(50),1,1,1,1,0], "load"), "walk")
+      assert_equal(10, @db.get_value('link5_2data1', [2,1,'Walk',t(56),1,1,1,1,0], "load"), "walk")
+      assert_equal(10, @db.get_value('link5_2data1', [6,1,'Walk',t(57),1,1,1,1,0], "load"), "walk")
+      assert_equal(10, @db.get_value('link5_2data1', [7,1,'Walk',t(58),1,1,1,2,0], "load"), "walk")
+      assert_equal(10, @db.get_value('link5_2data1', [4,1,'Walk',t(59),1,1,1,1,0], "load"), "walk")
+      assert_equal(10, @db.get_value('link5_2data1', [5,1,'Walk',t(60),1,1,1,2,0], "load"), "walk")
       
-      assert_true(@db.get_value('link5_2data1', [2,1,'Walk',10056,1,1,1,1,0], "cost") > 0.0)
+      assert_true(@db.get_value('link5_2data1', [2,1,'Walk',t(56),1,1,1,1,0], "cost") > 0.0)
 
     }
   ensure
@@ -50,7 +46,7 @@ class TC_walk_between_centroid < OtTestCase
     	set_link_speeds({[2,1] => 60.0, [4,1] => 60.0, [6,1] => 60.0, [7,2] => 60.0})
 
       # schedule based properties
-      @tr.scheduleAggregateTimePeriods = { 10050..10090 => 3 }.to_a
+      @tr.scheduleAggregateTimePeriods = { t(50)..t(90) => 3 }.to_a
       @tr.execute
 
       assert_equal(10, @db.get_value('link5_2data1', [1,1,'Walk',3,1,1,1,1,0], "load"), "walk")
@@ -75,7 +71,7 @@ class TC_walk_between_centroid < OtTestCase
       factors_150_penalty   = [0, 60, 60, 1.5*60, 0]
       factors_150_wait      = [0, 60, 1.5*60, 60, 0]
       
-			@tr.scheduleAggregateTimePeriods = { 10050..10090 => 3 }.to_a
+			@tr.scheduleAggregateTimePeriods = { t(50)..t(90) => 3 }.to_a
       @tr.routeFactors = [[40, 1, 60], [[30,31,32], *factors]]
       @tr.execute
       
@@ -95,7 +91,7 @@ class TC_walk_between_centroid < OtTestCase
   	assert_nothing_raised(RuntimeError) {
     	set_link_speeds({[2,1] => 60.0, [4,1] => 60.0, [6,1] => 60.0, [7,2] => 60.0})
     	
-			@tr.scheduleAggregateTimePeriods = { 10050..10090 => 3 }.to_a
+			@tr.scheduleAggregateTimePeriods = { t(50)..t(90) => 3 }.to_a
       @tr.skimMatrix = [1,1,1,1,[1,2,3],1]
       @tr.execute
       

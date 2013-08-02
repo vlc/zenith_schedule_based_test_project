@@ -1,14 +1,10 @@
 require 'utils/spec/ot_test_suite'
+require $Ot.jobDirectory / 'ot_schedule_test_case'
 
-class TC_fares < OtTestCase
+class TC_fares < OtScheduleTestCase
 
   def setup
-    clearOutputTables
-    @tr = OtTransit.new
-    @timePeriods = [10050]
-    @timePeriods.each { |t| create_matrix([1,30,t,1,1,1], [[1,2,10]]) }
-    @tr.loadMatricesFromSkimCube = true
-    @tr.odMatrix = [1,30,@timePeriods,1,1,1]
+    super
     @tr.load = [1,30,10,1,1,1]
     @tr.network = [30,10]
     @tr.scheduleBased = true
@@ -21,19 +17,19 @@ class TC_fares < OtTestCase
   end
 
   def check_load_based_on_usage(usage)
-    assert_in_delta(10,       @db.get_value('link5_2data1', [1,1,'Walk',10050,1,1,1,1,0], "load"), TEST_DELTA, "walk access")
-    assert_in_delta(10,       @db.get_value('link5_2data1', [2,1,'PT',  10060,1,1,1,1,3], "load"), TEST_DELTA, "single transit line")
+    assert_in_delta(10,       @db.get_value('link5_2data1', [1,1,'Walk',t(50),1,1,1,1,0], "load"), TEST_DELTA, "walk access")
+    assert_in_delta(10,       @db.get_value('link5_2data1', [2,1,'PT',  t(60),1,1,1,1,3], "load"), TEST_DELTA, "single transit line")
 
-    assert_in_delta(usage[0], @db.get_value('link5_2data1', [6,1,'Bus',10070,1,1,1,1,4],  "load"), TEST_DELTA, "optional transit line 4")
-    assert_in_delta(usage[0], @db.get_value('link5_2data1', [7,1,'Bus',10073,1,1,1,2,4],  "load"), TEST_DELTA, "optional transit line 4")
-    assert_in_delta(usage[0], @db.get_value('link5_2data1', [4,1,'Bus',10076,1,1,1,1,4],  "load"), TEST_DELTA, "optional transit line 4")
+    assert_in_delta(usage[0], @db.get_value('link5_2data1', [6,1,'Bus',t(70),1,1,1,1,4],  "load"), TEST_DELTA, "optional transit line 4")
+    assert_in_delta(usage[0], @db.get_value('link5_2data1', [7,1,'Bus',t(73),1,1,1,2,4],  "load"), TEST_DELTA, "optional transit line 4")
+    assert_in_delta(usage[0], @db.get_value('link5_2data1', [4,1,'Bus',t(76),1,1,1,1,4],  "load"), TEST_DELTA, "optional transit line 4")
 
-    assert_in_delta(usage[1], @db.get_value('link5_2data1', [6,1,'PT',10075,1,1,1,1,5],   "load"), TEST_DELTA, "optional transit line 5")
-    assert_in_delta(usage[1], @db.get_value('link5_2data1', [7,1,'PT',10076,1,1,1,2,5],   "load"), TEST_DELTA, "optional transit line 5")
-    assert_in_delta(usage[1], @db.get_value('link5_2data1', [4,1,'PT',10077,1,1,1,1,5],   "load"), TEST_DELTA, "optional transit line 5")
+    assert_in_delta(usage[1], @db.get_value('link5_2data1', [6,1,'PT',t(75),1,1,1,1,5],   "load"), TEST_DELTA, "optional transit line 5")
+    assert_in_delta(usage[1], @db.get_value('link5_2data1', [7,1,'PT',t(76),1,1,1,2,5],   "load"), TEST_DELTA, "optional transit line 5")
+    assert_in_delta(usage[1], @db.get_value('link5_2data1', [4,1,'PT',t(77),1,1,1,1,5],   "load"), TEST_DELTA, "optional transit line 5")
 
-    assert_in_delta(usage[0], @db.get_value('link5_2data1', [5,1,'Walk',10080,1,1,1,2,0], "load"), TEST_DELTA, "walk egress from line 4")
-    assert_in_delta(usage[1], @db.get_value('link5_2data1', [5,1,'Walk',10078,1,1,1,2,0], "load"), TEST_DELTA, "walk egress from line 5")
+    assert_in_delta(usage[0], @db.get_value('link5_2data1', [5,1,'Walk',t(80),1,1,1,2,0], "load"), TEST_DELTA, "walk egress from line 4")
+    assert_in_delta(usage[1], @db.get_value('link5_2data1', [5,1,'Walk',t(78),1,1,1,2,0], "load"), TEST_DELTA, "walk egress from line 5")
   end
 
   def test_simple
@@ -128,7 +124,7 @@ class TC_fares < OtTestCase
     check_load_based_on_usage(usage.map! {|u| u * 10 } )
 
     # Check the skims for fares
-    check_skim_matrix_contents([1,1,10050,1,6,1], {[1,2]=>1.5}, "Fares Skim")
+    check_skim_matrix_contents([1,1,t(50),1,6,1], {[1,2]=>1.5}, "Fares Skim")
   end
 
   def test_stoptype_to_stoptype
@@ -151,7 +147,7 @@ class TC_fares < OtTestCase
     check_load_based_on_usage(usage.map! {|u| u * 10 } )
 
     # Check the skims for fares
-    check_skim_matrix_contents([1,1,10050,1,6,1], {[1,2]=>2.0}, "Fares Skim")
+    check_skim_matrix_contents([1,1,t(50),1,6,1], {[1,2]=>2.0}, "Fares Skim")
   end
 
   def test_missing_fareZone

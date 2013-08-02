@@ -1,14 +1,10 @@
 require 'utils/spec/ot_test_suite'
+require $Ot.jobDirectory / 'ot_schedule_test_case'
 
-class TC_aet_skim < OtTestCase
+class TC_aet_skim < OtScheduleTestCase
 
   def setup
-    clearOutputTables
-    @tr = OtTransit.new
-    @timePeriods = [10050]
-    @timePeriods.each { |t| create_matrix([1,30,t,1,1,1], [[1,2,10]]) }
-    @tr.loadMatricesFromSkimCube = true
-    @tr.odMatrix = [1,30,@timePeriods,1,1,1]
+    super
     @tr.load = [1,30,10,1,1,1]
     @tr.network = [30,10]
     @tr.scheduleBased = true

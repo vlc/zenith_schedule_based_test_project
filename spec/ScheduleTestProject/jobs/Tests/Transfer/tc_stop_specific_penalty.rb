@@ -1,14 +1,10 @@
 require 'utils/spec/ot_test_suite'
+require $Ot.jobDirectory / 'ot_schedule_test_case'
 
-class TC_stop_specific_penalty < OtTestCase
+class TC_stop_specific_penalty < OtScheduleTestCase
 
   def setup
-    clearOutputTables
-    @tr = OtTransit.new
-    @timePeriods = [10050]
-    @timePeriods.each { |t| create_matrix([1,30,t,1,1,1], [[1,2,10]]) }
-    @tr.loadMatricesFromSkimCube = true
-    @tr.odMatrix = [1,30,@timePeriods,1,1,1]
+    super
     @tr.load = [1,30,10,1,1,1]
     @tr.network = [30,10]
     @tr.scheduleBased = true
@@ -32,7 +28,7 @@ class TC_stop_specific_penalty < OtTestCase
       @tr.skimMatrix = [1,1,1,1,[0,0,0,0,15,0,0],1]
       @tr.execute
       
-      assert_in_delta(15, @db.get_skim_value([1,1,10050,1,15,1], 1, 2), TEST_DELTA, "Penalty")
+      assert_in_delta(15, @db.get_skim_value([1,1,t(50),1,15,1], 1, 2), TEST_DELTA, "Penalty")
     }
   end
 end
