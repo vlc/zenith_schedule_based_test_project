@@ -49,7 +49,6 @@ class TC_load < OtTestCase
 
   end
 
-  # I don't know why this is broken
   def test_animateLoads
 
     # schedule based properties
@@ -82,6 +81,7 @@ class TC_load < OtTestCase
 
   end
 
+  # TODO: Fix me
   def test_aggregateLoads
 
     # schedule based properties
