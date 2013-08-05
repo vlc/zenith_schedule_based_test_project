@@ -28,7 +28,7 @@ class TC_stop_specific_penalty < OtScheduleTestCase
       @tr.skimMatrix = [1,1,1,1,[0,0,0,0,15,0,0],1]
       @tr.execute
       
-      assert_in_delta(15, @db.get_skim_value([1,1,t(50),1,15,1], 1, 2), TEST_DELTA, "Penalty")
+      assert_in_delta(15, @db.get_skim_value([1,1,tt(50),1,15,1], 1, 2), TEST_DELTA, "Penalty")
     }
   end
 end

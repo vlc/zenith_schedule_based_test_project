@@ -140,7 +140,7 @@ class TC_skim < OtScheduleTestCase
   def test_multiple_od_matrices
 
     # schedule based properties
-    @timePeriods = [t(40),t(50)]
+    @timePeriods = [tt(40),tt(50)]
     @timePeriods.zip([10.0, 5.0]).each { |t, value| create_matrix([1,30,t,1,1,1], [[1,2,value]]) }
     @tr.scheduleStartTime = @timePeriods.first
     @tr.scheduleDurations = [[5,5],[5]]
@@ -151,7 +151,7 @@ class TC_skim < OtScheduleTestCase
     @tr.numberOfThreads = 1
     @tr.execute
 
-    [t(40),t(45),t(50)].zip([57.25, 52.25, 47.25]).each { |t, expected_value|
+    [tt(40),tt(45),tt(50)].zip([57.25, 52.25, 47.25]).each { |t, expected_value|
       assert_in_delta(expected_value, @db.get_skim_value([1,1,t,1,1,1], 1, 2), TEST_DELTA, "cost skim for time #{t}")
     }
 
@@ -163,7 +163,7 @@ class TC_skim < OtScheduleTestCase
     assert_in_delta(average_cost, @db.get_skim_value([1,1,2,1,1,1], 1, 2), TEST_DELTA, "averaged cost skim")
 
     # EXECUTE! Now with time period aggregation that combines across multiple od matrices
-    @tr.scheduleAggregateTimePeriods = { t(40)..t(44) => 2, t(45)..t(90) => 3 }.to_a
+    @tr.scheduleAggregateTimePeriods = { tt(40)..tt(44) => 2, tt(45)..tt(90) => 3 }.to_a
     @tr.execute
 
     [2,3].zip([57.25, (52.25+47.25)/2]).each { |t,expected_value|
@@ -171,7 +171,7 @@ class TC_skim < OtScheduleTestCase
     }
 
     # EXECUTE! Now with time period aggregation along with departure profiles
-    @tr.scheduleAggregateTimePeriods = { t(40)..t(44) => 2, t(45)..t(90) => 3 }.to_a
+    @tr.scheduleAggregateTimePeriods = { tt(40)..tt(44) => 2, tt(45)..tt(90) => 3 }.to_a
     @tr.scheduleDepartureFractions = [[0.2,0.8], [1.0]]
     @tr.execute
 

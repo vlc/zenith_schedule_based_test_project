@@ -26,14 +26,14 @@ class TC_walk_between_centroid < OtScheduleTestCase
       # schedule based properties
       @tr.execute
 
-      assert_equal(10, @db.get_value('link5_2data1', [1,1,'Walk',t(50),1,1,1,1,0], "load"), "walk")
-      assert_equal(10, @db.get_value('link5_2data1', [2,1,'Walk',t(56),1,1,1,1,0], "load"), "walk")
-      assert_equal(10, @db.get_value('link5_2data1', [6,1,'Walk',t(57),1,1,1,1,0], "load"), "walk")
-      assert_equal(10, @db.get_value('link5_2data1', [7,1,'Walk',t(58),1,1,1,2,0], "load"), "walk")
-      assert_equal(10, @db.get_value('link5_2data1', [4,1,'Walk',t(59),1,1,1,1,0], "load"), "walk")
-      assert_equal(10, @db.get_value('link5_2data1', [5,1,'Walk',t(60),1,1,1,2,0], "load"), "walk")
+      assert_equal(10, @db.get_value('link5_2data1', [1,1,'Walk',tt(50),1,1,1,1,0], "load"), "walk")
+      assert_equal(10, @db.get_value('link5_2data1', [2,1,'Walk',tt(56),1,1,1,1,0], "load"), "walk")
+      assert_equal(10, @db.get_value('link5_2data1', [6,1,'Walk',tt(57),1,1,1,1,0], "load"), "walk")
+      assert_equal(10, @db.get_value('link5_2data1', [7,1,'Walk',tt(58),1,1,1,2,0], "load"), "walk")
+      assert_equal(10, @db.get_value('link5_2data1', [4,1,'Walk',tt(59),1,1,1,1,0], "load"), "walk")
+      assert_equal(10, @db.get_value('link5_2data1', [5,1,'Walk',tt(60),1,1,1,2,0], "load"), "walk")
       
-      assert_true(@db.get_value('link5_2data1', [2,1,'Walk',t(56),1,1,1,1,0], "cost") > 0.0)
+      assert_true(@db.get_value('link5_2data1', [2,1,'Walk',tt(56),1,1,1,1,0], "cost") > 0.0)
 
     }
   ensure
@@ -46,7 +46,7 @@ class TC_walk_between_centroid < OtScheduleTestCase
     	set_link_speeds({[2,1] => 60.0, [4,1] => 60.0, [6,1] => 60.0, [7,2] => 60.0})
 
       # schedule based properties
-      @tr.scheduleAggregateTimePeriods = { t(50)..t(90) => 3 }.to_a
+      @tr.scheduleAggregateTimePeriods = { tt(50)..tt(90) => 3 }.to_a
       @tr.execute
 
       assert_equal(10, @db.get_value('link5_2data1', [1,1,'Walk',3,1,1,1,1,0], "load"), "walk")
@@ -71,7 +71,7 @@ class TC_walk_between_centroid < OtScheduleTestCase
       factors_150_penalty   = [0, 60, 60, 1.5*60, 0]
       factors_150_wait      = [0, 60, 1.5*60, 60, 0]
       
-			@tr.scheduleAggregateTimePeriods = { t(50)..t(90) => 3 }.to_a
+			@tr.scheduleAggregateTimePeriods = { tt(50)..tt(90) => 3 }.to_a
       @tr.routeFactors = [[40, 1, 60], [[30,31,32], *factors]]
       @tr.execute
       
@@ -91,7 +91,7 @@ class TC_walk_between_centroid < OtScheduleTestCase
   	assert_nothing_raised(RuntimeError) {
     	set_link_speeds({[2,1] => 60.0, [4,1] => 60.0, [6,1] => 60.0, [7,2] => 60.0})
     	
-			@tr.scheduleAggregateTimePeriods = { t(50)..t(90) => 3 }.to_a
+			@tr.scheduleAggregateTimePeriods = { tt(50)..tt(90) => 3 }.to_a
       @tr.skimMatrix = [1,1,1,1,[1,2,3],1]
       @tr.execute
       
