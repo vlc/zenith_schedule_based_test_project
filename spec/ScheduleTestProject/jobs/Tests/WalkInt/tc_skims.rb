@@ -8,6 +8,7 @@ class TC_skim < OtScheduleTestCase
     @tr.load = [1,30,10,1,1,1]
     @tr.network = [30,10]
     @tr.scheduleBased = true
+    @tr.scheduleAggregateTimePeriods = @all_time_to_single_period_aggregation
   end
 
   def teardown
@@ -19,8 +20,6 @@ class TC_skim < OtScheduleTestCase
     @tr.scheduleStartTime = @timePeriods.first
     @tr.scheduleDurations = [5]
     @tr.skimMatrix = [1,1,1,1,[11,12,13,14,15,16,17],1]
-    @tr.scheduleAggregateTimePeriods = @all_time_to_single_period_aggregation
-    @tr.defaultIntraZonalSkimValue = 99999.0
     @tr.logitParameters = [0.1]
     @tr.execute
 
@@ -33,21 +32,21 @@ class TC_skim < OtScheduleTestCase
   end
 
   def test_aggregation
-    # schedule based properties
     @tr.scheduleStartTime = @timePeriods.first
     @tr.scheduleDurations = [5,5]
     @tr.skimMatrix = [1,1,1,1,[11,12,13,14,15,16,17],1]
-    @tr.scheduleAggregateTimePeriods = @all_time_to_single_period_aggregation
-    @tr.defaultIntraZonalSkimValue = 99999.0
+
     @tr.logitParameters = [0.1]
 
-
-    # Execute: the second time period has no connections to the destination, therefore costs should be infinite
+    # The second time period has no connections to the destination, therefore costs should be infinite even though
+    # the first time slice has a valid connection
     @tr.execute
     (11..17).to_a.each { |result|
       assert_equal(99999.0, @db.get_skim_value([1,1,2,1,result,1], 1, 2))
     }
   end
+
+
 end
 
 OtTestCaseRunner.run(__FILE__)
