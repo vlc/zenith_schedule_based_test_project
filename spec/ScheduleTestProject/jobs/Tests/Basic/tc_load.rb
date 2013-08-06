@@ -44,7 +44,7 @@ class TC_load < OtScheduleTestCase
 
   end
 
-  def t est_animateLoads
+  def test_animateLoads
     @tr.scheduleStartTime = @timePeriods.first
     @tr.scheduleDurations = [5]
     @tr.scheduleAnimateLoads = true
@@ -72,7 +72,7 @@ class TC_load < OtScheduleTestCase
   end
 
   # TODO: Fix me
-  def t est_aggregateLoads
+  def test_aggregateLoads
 
     # schedule based properties
     @tr.scheduleStartTime = @timePeriods.first
