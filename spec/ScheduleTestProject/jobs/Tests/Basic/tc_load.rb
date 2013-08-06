@@ -7,7 +7,6 @@ class TC_load < OtScheduleTestCase
     super
     @tr.load = [1,30,10,1,1,1]
     @tr.network = [30,10]
-    @tr.scheduleBased = true
     @tr.numberOfThreads = 1
   end
 

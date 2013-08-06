@@ -7,7 +7,7 @@ class TC_skim < OtScheduleTestCase
     super
     @tr.load = [1,30,10,1,1,1]
     @tr.network = [30,10]
-    @tr.scheduleBased = true
+    @tr.scheduleAggregateTimePeriods = @all_time_to_single_period_aggregation
     @tr.scheduleAggregateTimePeriods = @all_time_to_single_period_aggregation
   end
 

@@ -7,7 +7,6 @@ class TC_walk_between_centroid < OtScheduleTestCase
     super
     @tr.load = [1,30,10,1,1,1]
     @tr.network = [30,10]
-    @tr.scheduleBased = true
     @tr.scheduleStartTime = @timePeriods.first
     @tr.scheduleDurations = [5]
     @tr.walkBetweenCentroids = true

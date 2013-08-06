@@ -8,8 +8,6 @@ class TC_skim < OtScheduleTestCase
     set_fare_system({1 => 1})
     @tr.load = [1,30,10,1,1,1]
     @tr.network = [30,10]
-    @tr.scheduleBased = true
-    
   end
 
   def teardown

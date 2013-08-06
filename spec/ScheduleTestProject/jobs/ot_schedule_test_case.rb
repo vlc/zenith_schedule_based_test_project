@@ -1,7 +1,7 @@
 class OtScheduleTestCase < OtTestCase
 
   # This is a convenience alias for when we are checking link5 outputs
-  alias :tt :get_timetable_offset_time
+  alias :t :get_timetable_offset_time
 
   def setup
     clearOutputTables

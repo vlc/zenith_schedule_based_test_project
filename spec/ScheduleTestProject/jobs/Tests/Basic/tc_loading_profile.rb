@@ -6,7 +6,6 @@ class TC_loading_profile < OtScheduleTestCase
   def setup
     super
     @tr.network = [30,10]
-    @tr.scheduleBased = true
   end
 
   def teardown

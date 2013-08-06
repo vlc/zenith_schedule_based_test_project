@@ -7,7 +7,6 @@ class TC_in_veh_skim < OtScheduleTestCase
     super
     @tr.load = [1,30,10,1,1,1]
     @tr.network = [30,10]
-    @tr.scheduleBased = true    
   end
 
   def teardown
@@ -24,7 +23,6 @@ class TC_in_veh_skim < OtScheduleTestCase
       skim_results = [11,12,13,14,15,16]
 
       # schedule based properties
-      @tr.scheduleBased = true
       @tr.scheduleStartTime = @timePeriods.first
       @tr.scheduleDurations = [5]
       #@tr.skimMatrix = [1,1,1,1,1,1]
@@ -54,7 +52,6 @@ class TC_in_veh_skim < OtScheduleTestCase
       skim_results = [11,12,13,14,15,16]
 
       # schedule based properties
-      @tr.scheduleBased = true
       @tr.scheduleStartTime = @timePeriods.first
       @tr.scheduleDurations = [5]
       @tr.skimsPerMode = true
