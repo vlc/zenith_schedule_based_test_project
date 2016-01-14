@@ -18,7 +18,7 @@
   Predefines=7
 
 [Project]
-  Name=ScheduleTestProject
+  Name=ScheduleTestProject_61
   OrderNr=0
   Level=0
   Categories=
@@ -254,11 +254,12 @@
   SelectionShapeColor=0
   SelectionShapeWidth=1
   AutoLogging=0
-  ControlsVisible=0
+  ControlsVisible=1
   RoutesVisible=0
   DefaultViewName=
   HoverCoordinates=0
   DegreesInMinSec=0
+  ControlsInSeconds=0
   MessageLevel=1
   CollectionActivated=0
   AuditCollectJobs=1
@@ -288,9 +289,8 @@
   StopDwelltime=0.0000000
   TransitlineRetour=0
   TransitlineRecalcTravelTime=1
-  TimeTables=1
-  TimeTableOffset=10000
-  TimeTableMapping=
+  ControlEditorMode=-1
+  ControlEditorTime=-1
   JunctionMode=10
   JunctionTime=10
 
@@ -355,3 +355,16 @@
 
 [Maps]
   NMaps=0
+
+[DynamicTimes]
+  TimeMappingSpecified=1
+  StartDimension=10000
+  StartMinutes=0
+  IntervalDimension=1
+  IntervalMinutes=1
+  DayPartMapping=
+  ReferenceTime=0
+
+[ProjectView]
+  MatrixCubeVisibility=1
+  ParametersVisible=1
