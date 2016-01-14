@@ -8,6 +8,7 @@ class TC_skim < OtScheduleTestCase
     @tr.load = [1,30,10,1,1,1]
     @tr.network = [30,10]
     @tr.scheduleAggregateTimePeriods = @all_time_to_single_period_aggregation
+    @tr.scheduleAggregateTimePeriods = @all_time_to_single_period_aggregation
   end
 
   def teardown
