@@ -14,7 +14,7 @@ class LoadTest < OtScheduleTestCase
   end
 
   def teardown
-    # super
+    super
   end
 
   def test_simple
@@ -47,32 +47,32 @@ class LoadTest < OtScheduleTestCase
 
   end
 
-  # def t est_animateLoads
-  #   @tr.scheduleStartTime = @timePeriods.first
-  #   @tr.scheduleDurations = [5]
-  #   @tr.scheduleAnimateLoads = true
-  #
-  #   @tr.execute
-  #
-  #   # Note that the walk legs are 7 minutes long because they take 6 min in total so will be from [s, s+6] which spans 7 actual minute slices
-  #   (0..6).each  { |off| assert_equal(10, @db.get_value('link5_2data1', [1,1,'Walk',tt(50)+off,1,1,1,1,0], "load"), "walk access    [7 min]") }
-  #   (0..4).each  { |off| assert_equal(10, @db.get_value('link5_2data1', [2,1,'PT',  tt(60)+off,1,1,1,1,1], "load"), "PT stop 1 -> 2 [5 min]") }
-  #   # 1 min dwell time
-  #   (0..4).each  { |off| assert_equal(10, @db.get_value('link5_2data1', [6,1,'PT',  tt(66)+off,1,1,1,1,1], "load"), "PT stop 2 -> 3 (link 6) [5 min]") }
-  #   # BUG: There is another minute spent on the preceeding PT leg 66->70 (expected 66->69)
-  #   (0..3).each  { |off| assert_equal(10, @db.get_value('link5_2data1', [7,1,'PT',  tt(71)+off,1,1,1,2,1], "load"), "PT stop 2 -> 3 (link 7) [4 min]") }
-  #   # 1 min dwell time
-  #   (0..13).each { |off| assert_equal(10, @db.get_value('link5_2data1', [4,1,'PT',  tt(76)+off,1,1,1,1,1], "load"), "PT stop 3 -> 4 [14 min]") }
-  #   (0..6).each  { |off| assert_equal(10, @db.get_value('link5_2data1', [5,1,'Walk',tt(90)+off,1,1,1,2,0], "load"), "walk egress    [ 7 min]")     }
-  #
-  #   assert_equal(42*10, OtQuery.execute_to_a("SELECT sum(load) FROM link5_2data1").flatten.first, "total load")
-  #
-  #   # transit line table
-  #   assert_equal(10, @db.get_value('transitline5data1', [1,1,'PT',tt(60),1,1,1], "passengers"),   "passengers")
-  #   assert_equal(40, @db.get_value('transitline5data1', [1,1,'PT',tt(60),1,1,1], "passdistance"), "passenger distance") #  4 km * 10 passengers
-  #   assert_equal(5 , @db.get_value('transitline5data1', [1,1,'PT',tt(60),1,1,1], "passtime"),     "passenger time") # half hour * 10 passengers
-  #
-  # end
+  def test_animateLoads
+    # @tr.scheduleStartTime = @timePeriods.first
+    @tr.scheduleDurations = [5]
+    @tr.scheduleAnimateLoads = true
+
+    @tr.execute
+
+    # Note that the walk legs are 7 minutes long because they take 6 min in total so will be from [s, s+6] which spans 7 actual minute slices
+    (0..6).each  { |off| assert_equal(10, @db.get_value('link5_2data1', [1,1,'Walk',tt(400)+off,1,1,1,1,0], "load"), "walk access    [7 min]") }
+    (0..4).each  { |off| assert_equal(10, @db.get_value('link5_2data1', [2,1,'PT',  tt(420)+off,1,1,1,1,1], "load"), "PT stop 1 -> 2 [5 min]") }
+    # 1 min dwell time
+    (0..4).each  { |off| assert_equal(10, @db.get_value('link5_2data1', [6,1,'PT',  tt(426)+off,1,1,1,1,1], "load"), "PT stop 2 -> 3 (link 6) [5 min]") }
+    # BUG: There is another minute spent on the preceeding PT leg 66->70 (expected 66->69)
+    (0..3).each  { |off| assert_equal(10, @db.get_value('link5_2data1', [7,1,'PT',  tt(431)+off,1,1,1,2,1], "load"), "PT stop 2 -> 3 (link 7) [4 min]") }
+    # 1 min dwell time
+    (0..13).each { |off| assert_equal(10, @db.get_value('link5_2data1', [4,1,'PT',  tt(436)+off,1,1,1,1,1], "load"), "PT stop 3 -> 4 [14 min]") }
+    (0..6).each  { |off| assert_equal(10, @db.get_value('link5_2data1', [5,1,'Walk',tt(450)+off,1,1,1,2,0], "load"), "walk egress    [ 7 min]")     }
+
+    assert_equal(42*10, OtQuery.execute_to_a("SELECT sum(load) FROM link5_2data1").flatten.first, "total load")
+
+    # transit line table
+    assert_equal(10, @db.get_value('transitline5data1', [1,1,'PT',tt(420),1,1,1], "passengers"),   "passengers")
+    assert_equal(40, @db.get_value('transitline5data1', [1,1,'PT',tt(420),1,1,1], "passdistance"), "passenger distance") #  4 km * 10 passengers
+    assert_equal(5 , @db.get_value('transitline5data1', [1,1,'PT',tt(420),1,1,1], "passtime"),     "passenger time") # half hour * 10 passengers
+
+  end
   #
   # # TODO: Fix me
   # def t est_aggregateLoads
